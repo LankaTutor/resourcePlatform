@@ -1,0 +1,17 @@
+.user {
+  display: flex;
+
+  img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+  }
+  .user-info p {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  .user-info small {
+    margin-top: 0;
+    padding-top: 0;
+  }
+}
