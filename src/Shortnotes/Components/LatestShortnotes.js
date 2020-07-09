@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
-import "./Articles.scss";
-import CardArticle from "../../Article/Components/CardArticle";
+// import "./Articles.scss";
+// import CardArticle from "../../Article/Components/CardArticle";
 
 const Articles = (props) => {
   const ARTICLES = [
