@@ -25,12 +25,12 @@ export default function Navbar() {
         <span className="navbar-text">
           <ul className="navbar-nav mr-auto">
             <li className="nav-item">
-              <a className="nav-link" href="login">
+              <a className="nav-link" href="/login">
                 Login
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="signup">
+              <a className="nav-link" href="/signup">
                 Signup
               </a>
             </li>

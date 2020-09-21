@@ -20,7 +20,7 @@ export default function Forum() {
       </div>
 
       <div className="wrapper mt-5">
-        <SideBar />
+        <SideBar category="Fourum Category"/>
         <div className="p-5 main_content">
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb">

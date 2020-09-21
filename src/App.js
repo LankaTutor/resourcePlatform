@@ -28,6 +28,13 @@ import StudentProfilePage from "./UserProfile/Student/Pages/StudentProfilePage";
 import PrivateRoute from "./UserAuth/private-route/PrivateRoute";
 import Dashboard from "./UserAuth/dashboard/Dashboard";
 
+import PastPaper from "./Paper/Pages/pastPapers/PaperHome";
+import AddPastPaper from "./Paper/Components/mentors/AddPastPaper";
+import MathsPaper from "./Paper/Pages/pastPapers/MathsHome";
+import NotFoundPage from "./NotFound/NotFoundPage";
+import Upload from "./Paper/Components/upload/Upload";
+
+
 // Check for token to keep user logged in
 if (localStorage.jwtToken) {
   // Set auth token header auth
@@ -52,6 +59,7 @@ class App extends Component {
     return (
       <Provider store={store}>
         <Router>
+          <Switch>
           <Route path="/" exact>
             <Home />
           </Route>
@@ -71,16 +79,41 @@ class App extends Component {
           <Route path="/signup">
             <Signup />
           </Route>
-          <Switch>
-            <PrivateRoute
+          
+          <PrivateRoute
               exact
               path="/student"
               component={StudentProfilePage}
-            />
-          </Switch>
+          />
+          
           <Route path="/articles">
             <Article />
           </Route>
+          <Route exact path="/addPastpaper">
+              <AddPastPaper
+                subjects={[
+                  "Combined Mathematics",
+                  "Physics",
+                  "Chemistry",
+                  "Biology",
+                  "IT",
+                ]}
+              />
+          </Route>
+          <Route exact path="/pastpapers">
+              <PastPaper />
+            </Route>
+            <Route exact path="/pastpapers/Mathematics">
+              <MathsPaper />
+            </Route>
+            <Route exact path="/upload">
+              <Upload />
+            </Route>
+            {/* <Route path="*" component={NotFoundPage} /> */}
+            <Route path="*">
+              <NotFoundPage />
+            </Route>
+            </Switch>
         </Router>
       </Provider>
     );

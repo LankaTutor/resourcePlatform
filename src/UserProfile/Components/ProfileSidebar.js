@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { logoutUser } from "../../actions/authActions";
-
+import axios from 'axios';
 import "./ProfileSidebar.scss";
 
 class ProfileSidebar extends Component {
@@ -10,6 +10,17 @@ class ProfileSidebar extends Component {
     e.preventDefault();
     this.props.logoutUser();
   };
+
+  del = data => {
+    var option = window.confirm(`Are you sure want to deactivate your account ${data.fullname} ?`);
+    if(option){
+        axios.delete(`/api/users/deactivate/${data.id}`).then(res=>{
+           console.log(res);
+      })
+      this.props.logoutUser();
+    }
+    
+  }
 
   render() {
     const { user } = this.props.auth;
@@ -59,9 +70,15 @@ class ProfileSidebar extends Component {
             </a>
           </div>
         </div>
-        <div className="card-footer text-white bg-danger text-center">
-          Deactivate{" "}
-        </div>
+        <button
+           onClick={event => {
+            this.del(user)
+          }}
+        >
+          <div className="card-footer text-white bg-danger text-center">
+            Deactivate{" "}
+          </div>
+        </button>
       </div>
     );
   }
