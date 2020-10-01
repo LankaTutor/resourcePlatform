@@ -10,7 +10,7 @@ import MathsPaper from "../../Components/mentors/Maths";
 import MathFilter from '../../Components/students/MathFilter';
 
 export default function MathsHome() {
-  const isStudent = true;
+  const isStudent = false;
   return (
     <div>
       <div className="navbar-fix">
