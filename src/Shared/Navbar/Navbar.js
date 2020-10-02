@@ -21,6 +21,16 @@ export default function Navbar() {
               Contact
             </a>
           </li>
+          <li className="nav-item">
+            <a className="nav-link" href="#">
+              <select className="form-control">
+                <option selected>Medium</option>
+                <option value="english">English</option>
+                <option value="tamil">Tamil</option>
+                <option value="sinhala">Sinhala</option>
+              </select>
+            </a>
+          </li>
         </ul>
         <span className="navbar-text">
           <ul className="navbar-nav mr-auto">

@@ -10,7 +10,13 @@ import MathsPaper from "../../Components/mentors/Maths";
 import MathFilter from '../../Components/students/MathFilter';
 
 export default function MathsHome() {
-  const isStudent = false;
+  // const isStudent = false;
+  // const medium = english;
+  const details = {
+    isStudent:false,
+    medium:['tamil','sinhala','english']
+  }
+
   return (
     <div>
       <div className="navbar-fix">
@@ -40,9 +46,9 @@ export default function MathsHome() {
               </li>
             </ol>
           </nav>
-          {isStudent
+          {details.isStudent
             ? <MathFilter/>
-            : <MathsPaper subject="Mathematics" />
+            : <MathsPaper subject="Mathematics" medium="tamil"/>
           }
           {/* <MathsPaper subject="Mathematics" /> */}
           {/* <Question /> */}

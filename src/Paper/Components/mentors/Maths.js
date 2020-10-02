@@ -7,6 +7,7 @@ import EditIcon from '@material-ui/icons/Edit';
 import IconButton from '@material-ui/core/IconButton';
 import Tooltip from '@material-ui/core/Tooltip';
 import Button from '@material-ui/core/Button';
+import axios from 'axios';
 
 import $ from "jquery";
 
@@ -24,16 +25,32 @@ $(document).ready(function () {
 });
 
 class MathsPaper extends Component {
-  constructor(){
-    super();
+  constructor(props){
+    super(props);
 
     this.state = {
-      subject:'',
-      longText : 'Click here to view'
+      subject:this.props.subject,
+      medium:this.props.medium,
+      longText : 'Click here to view',
+      data:[],
+      editData:[]
     }
   }
 
+  componentDidMount(){
+    this.getAll();
+  }
+
+  getAll(){
+    axios.get("/api/resources/pastpapers/").then(res=>{
+        this.setState({
+            data:res.data
+        })
+    })
+  }   
+
   render() {
+    const {subject,medium,longText,data}=this.state;
     return (
       <div>
         <br />
@@ -43,7 +60,7 @@ class MathsPaper extends Component {
             {/* <button type="submit" class="btn btn-primary" style={{float:'right'}}>Add Paper</button> */}
           {/* </a> */}
           {/* </Link>  */}
-          <h2>Available {this.props.subject} Past Papers </h2>
+          <h2>Available {subject} Past Papers </h2>
           <input
             className="form-control"
             id="myInput"
@@ -64,52 +81,73 @@ class MathsPaper extends Component {
               </tr>
             </thead>
             <tbody id="myTable">
-              <tr>
+              {
+                data.length > 0 ?
+                (
+                  data.map(e=>
+                      <tr key={e._id}>
+                          <td>{e.year}</td>
+                          <td>{e.type}</td>
+                          <td>
+                            <Tooltip title={longText}>
+                              <Button href="*" >
+                                {medium=='tamil'? 'வினாத்தாள்' : (medium == 'sinhala')?'ප්‍රශ්න පත්‍රය':'Question Paper'}
+                              </Button>
+                            </Tooltip>
+                          </td>
+                          <td>
+                            <Tooltip title={longText}>
+                              <Button href="*">
+                                {medium=='tamil'? 'விடைத்தாள்' : (medium == 'sinhala')?'පිළිතුරු පත්‍රය':'Question Paper'}
+                              </Button>
+                            </Tooltip>
+                          </td>
+                          <td>
+                            <Tooltip title="Add Answer">
+                              <IconButton aria-label="add" style={{backgroundColor:'#2EC3F4'}}>
+                                <AddIcon />
+                              </IconButton>
+                            </Tooltip>
+                          </td>
+                          <td>
+                            <Tooltip title="Edit">
+                              <IconButton aria-label="edit" style={{backgroundColor:'#20EE9D'}}>
+                                <EditIcon />
+                              </IconButton>
+                            </Tooltip>
+                          </td>
+                          <td>
+                            <Tooltip title="Delete">
+                              <IconButton aria-label="delete" style={{backgroundColor:'#EE4620'}}>
+                                <DeleteIcon />
+                              </IconButton>
+                            </Tooltip>
+                          </td>  
+                      </tr>
+                  )
+              )
+              :
+              (
+                  <tr>
+                      <td>No Data</td>
+                  </tr>
+              )
+              }
+              {/* <tr>
                 <td>2017</td>
                 <td>Part-A</td>
                 <td>
-                  <Tooltip title={this.state.longText}>
-                    <Button>Question Paper</Button>
+                  <Tooltip title={longText}>
+                    <Button>
+                      {medium=='tamil'? 'வினாத்தாள்' : (medium == 'sinhala')?'ප්‍රශ්න පත්‍රය':'Question Paper'}
+                    </Button>
                   </Tooltip>
                 </td>
                 <td>
-                  <Tooltip title={this.state.longText}>
-                    <Button>Answer Paper</Button>
-                  </Tooltip>
-                </td>
-                <td>
-                    <Tooltip title="Add Answer">
-                      <IconButton aria-label="add" style={{backgroundColor:'#2EC3F4'}}>
-                        <AddIcon />
-                      </IconButton>
-                    </Tooltip>
-                </td>
-                <td>
-                    <Tooltip title="Edit">
-                      <IconButton aria-label="edit" style={{backgroundColor:'#20EE9D'}}>
-                        <EditIcon />
-                      </IconButton>
-                    </Tooltip>
-                </td>
-                <td>
-                    <Tooltip title="Delete">
-                      <IconButton aria-label="delete" style={{backgroundColor:'#EE4620'}}>
-                        <DeleteIcon />
-                      </IconButton>
-                    </Tooltip>
-                </td>
-              </tr>
-              <tr>
-                <td>2018</td>
-                <td>Part-A</td>
-                <td>
-                  <Tooltip title={this.state.longText}>
-                    <Button>Question Paper</Button>
-                  </Tooltip>
-                </td>
-                <td>
-                  <Tooltip title={this.state.longText}>
-                    <Button>Answer Paper</Button>
+                  <Tooltip title={longText}>
+                    <Button>
+                      {medium=='tamil'? 'விடைத்தாள்' : (medium == 'sinhala')?'පිළිතුරු පත්‍රය':'Question Paper'}
+                    </Button>
                   </Tooltip>
                 </td>
                 <td>
@@ -138,13 +176,17 @@ class MathsPaper extends Component {
                 <td>2018</td>
                 <td>Part-A</td>
                 <td>
-                  <Tooltip title={this.state.longText}>
-                    <Button>Question Paper</Button>
+                  <Tooltip title={longText}>
+                    <Button>
+                      {medium=='tamil'? 'வினாத்தாள்' : (medium == 'sinhala')?'ප්‍රශ්න පත්‍රය':'Question Paper'}
+                    </Button>
                   </Tooltip>
                 </td>
                 <td>
-                  <Tooltip title={this.state.longText}>
-                    <Button>Answer Paper</Button>
+                  <Tooltip title={longText}>
+                    <Button>
+                      {medium=='tamil'? 'விடைத்தாள்' : (medium == 'sinhala')?'පිළිතුරු පත්‍රය':'Question Paper'}
+                    </Button>
                   </Tooltip>
                 </td>
                 <td>
@@ -169,6 +211,45 @@ class MathsPaper extends Component {
                     </Tooltip>
                 </td>
               </tr>
+              <tr>
+                <td>2018</td>
+                <td>Part-A</td>
+                <td>
+                  <Tooltip title={longText}>
+                    <Button>
+                      {medium=='tamil'? 'வினாத்தாள்' : (medium == 'sinhala')?'ප්‍රශ්න පත්‍රය':'Question Paper'}
+                    </Button>
+                  </Tooltip>
+                </td>
+                <td>
+                  <Tooltip title={longText}>
+                    <Button>
+                      {medium=='tamil'? 'விடைத்தாள்' : (medium == 'sinhala')?'පිළිතුරු පත්‍රය':'Question Paper'}
+                    </Button>
+                  </Tooltip>
+                </td>
+                <td>
+                    <Tooltip title="Add Answer">
+                      <IconButton aria-label="add" style={{backgroundColor:'#2EC3F4'}}>
+                        <AddIcon />
+                      </IconButton>
+                    </Tooltip>
+                </td>
+                <td>
+                    <Tooltip title="Edit">
+                      <IconButton aria-label="edit" style={{backgroundColor:'#20EE9D'}}>
+                        <EditIcon />
+                      </IconButton>
+                    </Tooltip>
+                </td>
+                <td>
+                    <Tooltip title="Delete">
+                      <IconButton aria-label="delete" style={{backgroundColor:'#EE4620'}}>
+                        <DeleteIcon />
+                      </IconButton>
+                    </Tooltip>
+                </td>
+              </tr> */}
             </tbody>
           </table>
         </div>
