@@ -39,8 +39,7 @@ export default function Navbar() {
           </li>
           <li className="nav-item">
               <select className="form-control">
-                <option selected>Medium</option>
-                <option value="english">English</option>
+                <option selected>English</option>
                 <option value="tamil">Tamil</option>
                 <option value="sinhala">Sinhala</option>
               </select>
