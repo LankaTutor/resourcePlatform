@@ -33,6 +33,7 @@ import AddPastPaper from "./Paper/Components/mentors/AddPastPaper";
 import MathsPaper from "./Paper/Pages/pastPapers/MathsHome";
 import NotFoundPage from "./NotFound/NotFoundPage";
 import Upload from "./Paper/Components/upload/Upload";
+import Content from './UserProfile/Components/Content';
 
 
 // Check for token to keep user logged in
@@ -79,12 +80,16 @@ class App extends Component {
           <Route path="/signup">
             <Signup />
           </Route>
-          
+{/*           
           <PrivateRoute
               exact
               path="/student"
               component={StudentProfilePage}
-          />
+          /> */}
+
+          <PrivateRoute exact path="/student">
+            <StudentProfilePage title="Overview"/>
+          </PrivateRoute>
           
           <Route path="/articles">
             <Article />

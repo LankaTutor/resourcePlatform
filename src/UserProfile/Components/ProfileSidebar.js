@@ -27,26 +27,26 @@ class ProfileSidebar extends Component {
     return (
       <div className="card">
         <div className="card-header text-center">
-          <i class="fa fa-user-circle user-avatar mb-2" aria-hidden="true"></i>
+          <i className="fa fa-user-circle user-avatar mb-2" aria-hidden="true"></i>
           <br />
-          {user.fullname.split(" ")[0]}
+          {user.fullname.split(" ")[0]+ " " + user.fullname.split(" ")[1]}
         </div>
         <div className="card-body">
           <div className="list-group">
-            <a href="#" className="list-group-item list-group-item-action">
-              <i class="fa fa-address-card mr-2" aria-hidden="true"></i>
+            <a href="/student" className="list-group-item list-group-item-action">
+              <i className="fa fa-address-card mr-2" aria-hidden="true"></i>
               Overview
             </a>
             <a href="#" className="list-group-item list-group-item-action">
-              <i class="fa fa-envelope mr-2" aria-hidden="true"></i>
+              <i className="fa fa-envelope mr-2" aria-hidden="true"></i>
               Messages
             </a>
             <a href="#" className="list-group-item list-group-item-action">
-              <i class="fa fa-tasks mr-2" aria-hidden="true"></i>
+              <i className="fa fa-tasks mr-2" aria-hidden="true"></i>
               Progress
             </a>
             <a href="#" className="list-group-item list-group-item-action">
-              <i class="fa fa-wrench mr-2" aria-hidden="true"></i>
+              <i className="fa fa-wrench mr-2" aria-hidden="true"></i>
               Settings
             </a>
             <a href="#" className="list-group-item list-group-item-action">
@@ -60,7 +60,7 @@ class ProfileSidebar extends Component {
                 }}
                 onClick={this.onLogoutClick}
               >
-                <i class="fa fa-sign-out mr-2" aria-hidden="true"></i>
+                <i className="fa fa-sign-out mr-2" aria-hidden="true"></i>
                 Logout
               </button>
             </a>
