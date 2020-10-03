@@ -42,10 +42,6 @@ class ProfileSidebar extends Component {
               Messages
             </a>
             <a href="#" className="list-group-item list-group-item-action">
-              <i class="fa fa-quora mr-2" aria-hidden="true"></i>
-              Questions
-            </a>
-            <a href="#" className="list-group-item list-group-item-action">
               <i class="fa fa-tasks mr-2" aria-hidden="true"></i>
               Progress
             </a>

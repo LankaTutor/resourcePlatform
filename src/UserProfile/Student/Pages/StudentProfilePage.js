@@ -3,6 +3,8 @@ import "./ProfilePage.scss";
 import ProfileSidebar from "../../Components/ProfileSidebar";
 import Navbar from "../../../Shared/Navbar/Navbar";
 import SubNavbar from "../../../Shared/Navbar/SubNavbar";
+import Content from "../../Components/Content";
+import Footer from "../../../Shared/Footer";
 
 export default class StudentProfilePage extends Component {
   render() {
@@ -12,8 +14,9 @@ export default class StudentProfilePage extends Component {
         <SubNavbar />
         <div className="profile-container">
           <ProfileSidebar />
-          <div>adada</div>
+          <Content />
         </div>
+        <Footer />
       </div>
     );
   }
