@@ -14,7 +14,7 @@ export default class StudentProfilePage extends Component {
         <SubNavbar />
         <div className="profile-container">
           <ProfileSidebar />
-          <Content title={this.props.title}/>
+          <Content/>
         </div>
         <Footer />
       </div>

@@ -29,7 +29,7 @@ class ProfileSidebar extends Component {
         <div className="card-header text-center">
           <i className="fa fa-user-circle user-avatar mb-2" aria-hidden="true"></i>
           <br />
-          {user.fullname.split(" ")[0]+ " " + user.fullname.split(" ")[1]}
+          {user.fullname.split(" ")[0]+" "+user.fullname.split(" ")[1]}
         </div>
         <div className="card-body">
           <div className="list-group">
@@ -49,7 +49,7 @@ class ProfileSidebar extends Component {
               <i className="fa fa-wrench mr-2" aria-hidden="true"></i>
               Settings
             </a>
-            <a href="#" className="list-group-item list-group-item-action">
+            {/* <a href="#" className="list-group-item list-group-item-action">
               <button
                 style={{
                   width: "150px",
@@ -63,7 +63,7 @@ class ProfileSidebar extends Component {
                 <i className="fa fa-sign-out mr-2" aria-hidden="true"></i>
                 Logout
               </button>
-            </a>
+            </a> */}
           </div>
         </div>
         <button

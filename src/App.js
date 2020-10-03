@@ -80,17 +80,13 @@ class App extends Component {
           <Route path="/signup">
             <Signup />
           </Route>
-{/*           
+          
           <PrivateRoute
               exact
               path="/student"
               component={StudentProfilePage}
-          /> */}
+          />
 
-          <PrivateRoute exact path="/student">
-            <StudentProfilePage title="Overview"/>
-          </PrivateRoute>
-          
           <Route path="/articles">
             <Article />
           </Route>
