@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import {Dropdown} from 'react-bootstrap';
 import { connect } from "react-redux";
 import { logoutUser } from "../../actions/authActions";
 import axios from 'axios';
@@ -37,7 +38,7 @@ class ProfileSidebar extends Component {
               <i className="fa fa-address-card mr-2" aria-hidden="true"></i>
               Overview
             </a>
-            <a href="#" className="list-group-item list-group-item-action">
+            <a href="/student/Messages" className="list-group-item list-group-item-action">
               <i className="fa fa-envelope mr-2" aria-hidden="true"></i>
               Messages
             </a>
@@ -49,21 +50,6 @@ class ProfileSidebar extends Component {
               <i className="fa fa-wrench mr-2" aria-hidden="true"></i>
               Settings
             </a>
-            {/* <a href="#" className="list-group-item list-group-item-action">
-              <button
-                style={{
-                  width: "150px",
-                  borderRadius: "3px",
-                  letterSpacing: "1.5px",
-                  marginTop: "1rem",
-                  padding: "3px 5px",
-                }}
-                onClick={this.onLogoutClick}
-              >
-                <i className="fa fa-sign-out mr-2" aria-hidden="true"></i>
-                Logout
-              </button>
-            </a> */}
           </div>
         </div>
         <button

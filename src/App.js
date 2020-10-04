@@ -33,7 +33,9 @@ import AddPastPaper from "./Paper/Components/mentors/AddPastPaper";
 import MathsPaper from "./Paper/Pages/pastPapers/MathsHome";
 import NotFoundPage from "./NotFound/NotFoundPage";
 import Upload from "./Paper/Components/upload/Upload";
-import Content from './UserProfile/Components/Content';
+import StudentMessages from "./UserProfile/Student/Pages/StudentMessages";
+import MentorProfile from "./UserProfile/mentorProfile";
+
 
 
 // Check for token to keep user logged in
@@ -87,6 +89,12 @@ class App extends Component {
               component={StudentProfilePage}
           />
 
+            <PrivateRoute
+                exact
+                path="/student/Messages"
+                component={StudentMessages}
+            />
+
           <Route path="/articles">
             <Article />
           </Route>
@@ -110,6 +118,11 @@ class App extends Component {
             <Route exact path="/upload">
               <Upload />
             </Route>
+
+            <Route exact path="/mentors">
+              <MentorProfile />
+            </Route>
+
             {/* <Route path="*" component={NotFoundPage} /> */}
             <Route path="*">
               <NotFoundPage />

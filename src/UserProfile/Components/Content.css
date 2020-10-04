@@ -1,5 +1,6 @@
 .box{
     border: 2px solid black;
     border-radius: 10px;
-    background-color: #ccffe6;
+    background-color: white;
+    object-fit: cover;
 }

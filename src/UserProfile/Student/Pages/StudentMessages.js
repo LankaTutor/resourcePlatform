@@ -3,10 +3,10 @@ import "./ProfilePage.scss";
 import ProfileSidebar from "../../Components/ProfileSidebar";
 import Navbar from "../../../Shared/Navbar/Navbar";
 import SubNavbar from "../../../Shared/Navbar/SubNavbar";
-import Overview from "../../Components/Overview";
+import Messages from "../../Components/Messages";
 import Footer from "../../../Shared/Footer";
 
-export default class StudentProfilePage extends Component {
+export default class StudentMessages extends Component {
   render() {
     return (
       <div>
@@ -14,7 +14,7 @@ export default class StudentProfilePage extends Component {
         <SubNavbar />
         <div className="profile-container">
           <ProfileSidebar />
-          <Overview/>
+          <Messages/>
         </div>
         <Footer />
       </div>

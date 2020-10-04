@@ -23,7 +23,7 @@ export default function Navbar() {
       <div className="container">
         <ul className="navbar-nav mr-auto">
           <li className="nav-item">
-            <a className="nav-link" href="#">
+            <a className="nav-link" href="/mentors">
               Mentors
             </a>
           </li>
