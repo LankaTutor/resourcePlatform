@@ -1,10 +1,9 @@
 import React, { Component } from "react";
 
-import "./LatestArticles.scss";
-import CardArticle from "../../Resources/Article/Components/CardArticle";
-import SectionTitle from "../../Shared/SectionTitle";
+// import "./Articles.scss";
+// import CardArticle from "../../Article/Components/CardArticle";
 
-const LatestArticles = (props) => {
+const Articles = (props) => {
   const ARTICLES = [
     {
       id: "a1",
@@ -37,7 +36,8 @@ const LatestArticles = (props) => {
       image:
         "https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
       title: "Science behind PI",
-      description: "Everything you need to know about PI",
+      description:
+        "Everything you need to know about PI Everything you need to know about PI",
       category: "Mathematics",
       author: {
         img:
@@ -74,8 +74,7 @@ const LatestArticles = (props) => {
   ];
   return (
     <div className="my-5">
-      <SectionTitle title="Latest Articles" icon="fas fa-book" />
-      <div className="latest-articles mt-5">
+      <div className="articles mt-5">
         {ARTICLES.map((article) => {
           return <CardArticle article={article} />;
         })}
@@ -84,4 +83,4 @@ const LatestArticles = (props) => {
   );
 };
 
-export default LatestArticles;
+export default Articles;
