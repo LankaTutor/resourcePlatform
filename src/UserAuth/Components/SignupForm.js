@@ -5,6 +5,7 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { registerUser } from "../../actions/authActions";
 import classnames from "classnames";
+import emailjs from 'emailjs-com';
 
 import "./UserAuth.scss";
 
@@ -42,6 +43,14 @@ class SignupForm extends Component {
   onSubmit = e => {
     e.preventDefault();
 
+    // emailjs.sendForm('gmail', 'template_p2yOkil', this.state.fullname, 'user_rD5xVMuNtKYkJ5IEKF7Cv')
+    // .then((result) => {
+    //     console.log(result.text);
+    // }, (error) => {
+    //     console.log(error.text);
+    // });
+
+
     const newUser = {
       fullname:this.state.fullname,
       email:this.state.email,
@@ -51,6 +60,7 @@ class SignupForm extends Component {
 
     this.props.registerUser(newUser, this.props.history);
     console.log(newUser);
+
   }
 
   render() {
