@@ -42,6 +42,8 @@ import Upload from "./Resources/Paper/Components/upload/Upload";
 
 import AdminDashboard from "./Admin/AdminDashboard";
 import SigninPage from "./UserAuth/Pages/SigninPage";
+import Lecture from "./Resources/Lectures/Pages/Lecture";
+import Biology from "./Resources/Lectures/Pages/Biology";
 // Check for token to keep user logged in
 if (localStorage.jwtToken) {
   // Set auth token header auth
@@ -96,14 +98,14 @@ class App extends Component {
               component={StudentProfilePage}
             />
             <PrivateRoute
-                exact
-                path="/student/Messages"
-                component={StudentMessages}
+              exact
+              path="/student/Messages"
+              component={StudentMessages}
             />
 
-          <Route path="/articles">
-            <Article />
-          </Route>
+            <Route path="/articles">
+              <Article />
+            </Route>
             <Route exact path="/pastpapers">
               <PastPaper />
             </Route>
@@ -124,6 +126,12 @@ class App extends Component {
             </Route>
             <Route path="/admin" exact>
               <AdminDashboard />
+            </Route>
+            <Route path="/alsubjects" exact>
+              <Lecture />
+            </Route>
+            <Route path="/alsubjects/biology" exact>
+              <Biology />
             </Route>
             {/* <Route path="*" component={NotFoundPage} /> */}
             <Route path="*">
