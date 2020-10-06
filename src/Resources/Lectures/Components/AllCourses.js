@@ -2,10 +2,10 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
-import CardArticle from "../../Resources/Article/Components/CardArticle";
+import CourseCard from "./CourseCard";
 import Typography from "@material-ui/core/Typography";
 import VideoLibraryIcon from "@material-ui/icons/VideoLibrary";
-import SectionTitle from "../../Shared/SectionTitle";
+import SectionTitle from "../../../Shared/SectionTitle";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.text.secondary,
   },
 }));
-function LatestArticle() {
+function AllCourses() {
   const classes = useStyles();
   return (
     <div
@@ -26,38 +26,46 @@ function LatestArticle() {
         padding: "50px",
       }}
     >
-      <SectionTitle title="Latest Article" icon="fas fa-book" />
+      <SectionTitle title="All Courses" icon="fas fa-book" />
 
       <Grid container spacing={3}>
         <Grid item xs={6} sm={3}>
           <Paper className={classes.paper}>
-            <CardArticle
-              subject="Math"
-              img="https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png"
+            <CourseCard
+              subject="Biology"
+              unit="10"
+              video="20"
+              img="https://debrabell.com/wp-content/uploads/2017/03/Biology.jpg"
             />
           </Paper>
         </Grid>
         <Grid item xs={6} sm={3}>
           <Paper className={classes.paper}>
-            <CardArticle
-              subject="Math"
-              img="https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png"
+            <CourseCard
+              subject="Mathematics"
+              unit="10"
+              video="20"
+              img="https://us.123rf.com/450wm/sn333g/sn333g1803/sn333g180300019/96670673-mathematics-circular-flat-illustration-with-math-symbol-.jpg?ver=6"
             />
           </Paper>
         </Grid>
         <Grid item xs={6} sm={3}>
           <Paper className={classes.paper}>
-            <CardArticle
-              subject="Math"
-              img="https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png"
+            <CourseCard
+              subject="Physics"
+              unit="10"
+              video="20"
+              img="https://www.newsdotcom.com/wp-content/uploads/2020/04/physics-696x373-1.jpg"
             />
           </Paper>
         </Grid>
         <Grid item xs={6} sm={3}>
           <Paper className={classes.paper}>
-            <CardArticle
-              subject="Math"
-              img="https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png"
+            <CourseCard
+              subject="Chemistry"
+              unit="10"
+              video="20"
+              img="https://thumbs.dreamstime.com/b/chemistry-round-colorful-illustration-vector-science-education-symbol-made-word-chemical-icons-90137310.jpg"
             />
           </Paper>
         </Grid>
@@ -66,4 +74,4 @@ function LatestArticle() {
   );
 }
 
-export default LatestArticle;
+export default AllCourses;

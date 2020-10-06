@@ -5,19 +5,18 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { registerUser } from "../../actions/authActions";
 import classnames from "classnames";
-import emailjs from 'emailjs-com';
 
 import "./UserAuth.scss";
 
 class SignupForm extends Component {
-  constructor(){
+  constructor() {
     super();
     this.state = {
-      fullname:"",
-      email:"",
-      password:"",
-      password2:"",
-      errors:{}
+      fullname: "",
+      email: "",
+      password: "",
+      password2: "",
+      errors: {},
     };
   }
 
@@ -31,16 +30,16 @@ class SignupForm extends Component {
   componentWillReceiveProps(nextProps) {
     if (nextProps.errors) {
       this.setState({
-        errors: nextProps.errors
+        errors: nextProps.errors,
       });
     }
   }
 
-  onChange = e => {
+  onChange = (e) => {
     this.setState({ [e.target.id]: e.target.value });
   };
 
-  onSubmit = e => {
+  onSubmit = (e) => {
     e.preventDefault();
 
     // emailjs.sendForm('gmail', 'template_p2yOkil', this.state.fullname, 'user_rD5xVMuNtKYkJ5IEKF7Cv')
@@ -50,102 +49,108 @@ class SignupForm extends Component {
     //     console.log(error.text);
     // });
 
-
     const newUser = {
-      fullname:this.state.fullname,
-      email:this.state.email,
-      password:this.state.password,
-      password2:this.state.password2
+      fullname: this.state.fullname,
+      email: this.state.email,
+      password: this.state.password,
+      password2: this.state.password2,
     };
 
     this.props.registerUser(newUser, this.props.history);
     console.log(newUser);
-
-  }
+  };
 
   render() {
-    const {errors} = this.state;
+    const { errors } = this.state;
 
     return (
       <div className="base-container " ref={this.props.containerRef}>
         <div className="header">Sign Up and Start Learning! </div>
-        
+
         <div className="content">
           {/* <div className="image">
                 <img src={loginImage} />
               </div> */}
           <form noValidate onSubmit={this.onSubmit}>
-          <div className="form">
-            <div className="form-group">
-              {/* <label htmlFor="username">Full name</label> */}
-              <input 
-                type="text" 
-                name="fullname" 
-                id="fullname"
-                placeholder=" Full Name" 
-                value={this.state.fullname}
-                error={errors.fullname}
-                onChange={this.onChange}
-                className={classnames("", {
-                  invalid: errors.fullname
-                })}
-              />
-              <span className="red-text" style={{color:"red"}}>{errors.fullname}</span>
+            <div className="form">
+              <div className="form-group">
+                {/* <label htmlFor="username">Full name</label> */}
+                <input
+                  type="text"
+                  name="fullname"
+                  id="fullname"
+                  placeholder=" Full Name"
+                  value={this.state.fullname}
+                  error={errors.fullname}
+                  onChange={this.onChange}
+                  className={classnames("", {
+                    invalid: errors.fullname,
+                  })}
+                />
+                <span className="red-text" style={{ color: "red" }}>
+                  {errors.fullname}
+                </span>
+              </div>
+              <div className="form-group">
+                {/* <label htmlFor="email">Email</label> */}
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder=" Email"
+                  value={this.state.email}
+                  error={errors.email}
+                  onChange={this.onChange}
+                  className={classnames("", {
+                    invalid: errors.email,
+                  })}
+                />
+                <span className="red-text" style={{ color: "red" }}>
+                  {errors.email}
+                </span>
+              </div>
+              <div className="form-group">
+                {/* <label htmlFor="password">Password</label> */}
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  placeholder=" Password"
+                  value={this.state.password}
+                  error={errors.password}
+                  onChange={this.onChange}
+                  className={classnames("", {
+                    invalid: errors.password,
+                  })}
+                />
+                <span className="red-text" style={{ color: "red" }}>
+                  {errors.password}
+                </span>
+              </div>
+              <div className="form-group">
+                {/* <label htmlFor="conformPassword">Conform Password</label> */}
+                <input
+                  type="password"
+                  name="password2"
+                  id="password2"
+                  placeholder=" Confirm Password"
+                  value={this.state.password2}
+                  error={errors.password2}
+                  onChange={this.onChange}
+                  className={classnames("", {
+                    invalid: errors.password2,
+                  })}
+                />
+                <span className="red-text" style={{ color: "red" }}>
+                  {errors.password2}
+                </span>
+              </div>
             </div>
-            <div className="form-group">
-              {/* <label htmlFor="email">Email</label> */}
-              <input 
-                type="email" 
-                name="email" 
-                id="email"
-                placeholder=" Email" 
-                value={this.state.email}
-                error={errors.email}
-                onChange={this.onChange}
-                className={classnames("", {
-                  invalid: errors.email
-                })}
-              />
-              <span className="red-text" style={{color:"red"}}>{errors.email}</span>
+            <div>
+              <button type="submit" className="btn center">
+                Sign Up
+              </button>
             </div>
-            <div className="form-group">
-              {/* <label htmlFor="password">Password</label> */}
-              <input 
-                type="password" 
-                name="password" 
-                id="password"
-                placeholder=" Password" 
-                value={this.state.password}
-                error={errors.password}
-                onChange={this.onChange}
-                className={classnames("", {
-                  invalid: errors.password
-                })}
-              />
-              <span className="red-text" style={{color:"red"}}>{errors.password}</span>
-            </div>
-            <div className="form-group">
-              {/* <label htmlFor="conformPassword">Conform Password</label> */}
-              <input
-                type="password"
-                name="password2"
-                id="password2"
-                placeholder=" Confirm Password"
-                value={this.state.password2}
-                error={errors.password2}
-                onChange={this.onChange}
-                className={classnames("", {
-                  invalid: errors.password2
-                })}
-              />
-              <span className="red-text" style={{color:"red"}}>{errors.password2}</span>
-            </div>
-          </div>
-          <div>
-            <button type="submit" className="btn center">
-              Sign Up
-            </button>
-          </div>
           </form>
         </div>
         <div className="footer">
@@ -168,15 +173,14 @@ class SignupForm extends Component {
 SignupForm.propTypes = {
   registerUser: PropTypes.func.isRequired,
   auth: PropTypes.object.isRequired,
-  errors: PropTypes.object.isRequired
+  errors: PropTypes.object.isRequired,
 };
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   auth: state.auth,
-  errors: state.errors
+  errors: state.errors,
 });
 
-export default connect(
-  mapStateToProps,
-  { registerUser }
-)(withRouter(SignupForm));
+export default connect(mapStateToProps, { registerUser })(
+  withRouter(SignupForm)
+);

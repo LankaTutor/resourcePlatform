@@ -17,7 +17,7 @@ const useStyles = makeStyles({
   },
 });
 
-function CardArticle({ subject, description, img, author }) {
+function CourseCard({ subject, unit, video, img }) {
   const classes = useStyles();
 
   return (
@@ -30,7 +30,8 @@ function CardArticle({ subject, description, img, author }) {
               {subject}
             </Typography>
             <Typography variant="body2" color="textSecondary" component="p">
-              There are sub units and video lectures available for {subject}
+              There are {unit} sub units and {video} video lectures available{" "}
+              for {subject}
             </Typography>
           </CardContent>
         </CardActionArea>
@@ -47,4 +48,4 @@ function CardArticle({ subject, description, img, author }) {
   );
 }
 
-export default CardArticle;
+export default CourseCard;
