@@ -22,7 +22,6 @@ class Content extends Component {
                 alt="Card image cap"
               />
               <div className="card-body">
-                <p style={{ float: "right" }}>1 hr ago</p>
                 <h5 className="card-title">Combined Maths</h5>
                 <a href="#" className="btn btn-info">
                   Click Here
@@ -39,7 +38,6 @@ class Content extends Component {
                 alt="Card image cap"
               />
               <div className="card-body">
-                <p style={{ float: "right" }}>2 days ago</p>
                 <h5 className="card-title">Physics</h5>
                 <a href="#" className="btn btn-info">
                   Click Here
@@ -56,7 +54,6 @@ class Content extends Component {
                 alt="Card image cap"
               />
               <div className="card-body">
-                <p style={{ float: "right" }}>5 hrs ago</p>
                 <h5 className="card-title">Chemistry</h5>
                 <a href="#" className="btn btn-info">
                   Click Here
@@ -74,7 +71,6 @@ class Content extends Component {
                 alt="Card image cap"
               />
               <div className="card-body">
-                <p style={{ float: "right" }}>1 month ago</p>
                 <h5 className="card-title">ICT</h5>
                 <a href="#" className="btn btn-info">
                   Click Here

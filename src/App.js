@@ -17,27 +17,31 @@ import "./App.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import Home from "./Home/Pages/Home";
-import Forum from "./Forum/Pages/Forum";
-import Article from "./Article/Pages/Article";
+import Forum from "./Resources/Forum/Pages/Forum";
+import Article from "./Resources/Article/Pages/Article";
 import Login from "./UserAuth/Pages/Login";
 import Signup from "./UserAuth/Pages/Signup";
-import Shortnotes from "./Shortnotes/Pages/Shortnotes";
-import QuestionBankHome from "./QuestionBank/Pages/QuestionBankHome.js";
+import Shortnotes from "./Resources/Shortnotes/Pages/Shortnotes";
+import QuestionBankHome from "./Resources/QuestionBank/Pages/QuestionBankHome.js";
 import StudentProfilePage from "./UserProfile/Student/Pages/StudentProfilePage";
 
 import PrivateRoute from "./UserAuth/private-route/PrivateRoute";
 import Dashboard from "./UserAuth/dashboard/Dashboard";
 
-import PastPaper from "./Paper/Pages/pastPapers/PaperHome";
-import AddPastPaper from "./Paper/Components/mentors/AddPastPaper";
-import MathsPaper from "./Paper/Pages/pastPapers/MathsHome";
+import PastPaper from "./Resources/Paper/Pages/pastPapers/PaperHome";
+import AddPastPaperAnswer from "./Resources/Paper/Components/mentors/AddPastPaperAnswer";
+import MathsPaper from "./Resources/Paper/Pages/pastPapers/MathsHome";
 import NotFoundPage from "./NotFound/NotFoundPage";
-import Upload from "./Paper/Components/upload/Upload";
+
+//import Upload from "./Paper/Components/upload/Upload";
 import StudentMessages from "./UserProfile/Student/Pages/StudentMessages";
 import MentorProfile from "./UserProfile/mentorProfile";
 
+import Upload from "./Resources/Paper/Components/upload/Upload";
+//import Content from "./UserProfile/Components/Content";
 
-
+import AdminDashboard from "./Admin/AdminDashboard";
+import SigninPage from "./UserAuth/Pages/SigninPage";
 // Check for token to keep user logged in
 if (localStorage.jwtToken) {
   // Set auth token header auth
@@ -63,32 +67,34 @@ class App extends Component {
       <Provider store={store}>
         <Router>
           <Switch>
-          <Route path="/" exact>
-            <Home />
-          </Route>
-          <Route path="/forum">
-            <Forum />
-          </Route>
-          <Route path="/shortnotes">
-            <Shortnotes />
-          </Route>
-          <Route path="/questionbank">
-            <QuestionBankHome />
-          </Route>
-          <Route path="/login">
-            <Login />
-          </Route>
-          {/* <Route path="/login" component={Login} /> */}
-          <Route path="/signup">
-            <Signup />
-          </Route>
-          
-          <PrivateRoute
+            <Route path="/" exact>
+              <Home />
+            </Route>
+            <Route path="/forum">
+              <Forum />
+            </Route>
+            <Route path="/shortnotes">
+              <Shortnotes />
+            </Route>
+            <Route path="/questionbank">
+              <QuestionBankHome />
+            </Route>
+            <Route path="/login">
+              <Login />
+            </Route>
+            <Route path="/login1">
+              <SigninPage />
+            </Route>
+            {/* <Route path="/login" component={Login} /> */}
+            <Route path="/signup">
+              <Signup />
+            </Route>
+
+            <PrivateRoute
               exact
               path="/student"
               component={StudentProfilePage}
-          />
-
+            />
             <PrivateRoute
                 exact
                 path="/student/Messages"
@@ -98,23 +104,17 @@ class App extends Component {
           <Route path="/articles">
             <Article />
           </Route>
-          <Route exact path="/addPastpaper">
-              <AddPastPaper
-                subjects={[
-                  "Combined Mathematics",
-                  "Physics",
-                  "Chemistry",
-                  "Biology",
-                  "IT",
-                ]}
-              />
-          </Route>
-          <Route exact path="/pastpapers">
+            <Route exact path="/pastpapers">
               <PastPaper />
             </Route>
             <Route exact path="/pastpapers/Mathematics">
               <MathsPaper />
             </Route>
+
+            {/* <Route path="/pastpapers/Mathematics/addAnswer">
+              <AddPastPaperAnswer />
+            </Route> */}
+
             <Route exact path="/upload">
               <Upload />
             </Route>
@@ -122,12 +122,14 @@ class App extends Component {
             <Route exact path="/mentors">
               <MentorProfile />
             </Route>
-
+            <Route path="/admin" exact>
+              <AdminDashboard />
+            </Route>
             {/* <Route path="*" component={NotFoundPage} /> */}
             <Route path="*">
               <NotFoundPage />
             </Route>
-            </Switch>
+          </Switch>
         </Router>
       </Provider>
     );
