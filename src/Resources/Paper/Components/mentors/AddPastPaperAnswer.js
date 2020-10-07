@@ -45,7 +45,7 @@ function AddPastPaperAnswer(props) {
           .then((url) => {
             setUrl(url);
 
-            axios.post("/api/resources/pastpapers", {
+            axios.post("/api/pastpapers", {
               subject: subject,
               language: language,
               type: type,

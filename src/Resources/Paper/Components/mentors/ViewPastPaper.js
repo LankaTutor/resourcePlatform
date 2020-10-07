@@ -5,7 +5,7 @@ import axios from "axios";
 
 function ViewPastPaper(props) {
   const [data, setData] = useState([]);
-  axios.get(`/api/resources/pastpapers`).then((response) => {
+  axios.get(`/api/pastpapers/${props.subject}`).then((response) => {
     setData(response.data);
   });
 
