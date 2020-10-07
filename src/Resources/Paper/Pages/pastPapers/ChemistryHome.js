@@ -7,19 +7,17 @@ import SideBar from "../../../../Shared/SideBar";
 import Footer from "../../../../Shared/Footer";
 import PastPaper from "../../Components/mentors/PastPaper";
 //import MathsPaper from "../../Components/mentors/Maths";
-import MathsPaper from "../../Components/mentors/MathPastPaper";
-import MathFilter from "../../Components/students/MathFilter";
-
+import ChemistryPaper from "../../Components/mentors/ChemistryPastPaper";
+import ChemistryFilter from "../../Components/students/ChemistryFilter";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 
- function MathsHome(props) {
-  const {user} = props.auth
-  const details = {
-    role: user.role,
-    medium: ["tamil", "sinhala", "english"],
-  };
-  
+function ChemistryHome(props) {
+    const {user} = props.auth
+    const details = {
+      role: user.role,
+      medium: ["tamil", "sinhala", "english"],
+    };
 
   return (
     <div>
@@ -46,14 +44,14 @@ import { connect } from "react-redux";
                 <a href="/pastpapers">PastPapers</a>
               </li>
               <li class="breadcrumb-item active" aria-current="page">
-                Maths
+                Chemistry
               </li>
             </ol>
           </nav>
-          {details.role === "student" ? (
-            <MathFilter />
+          {details.role==="student" ? (
+            <ChemistryFilter />
           ) : (
-            <MathsPaper subject="Maths" medium="english" />
+            <ChemistryPaper subject="Chemistry" medium="english" />
           )}
           {/* <MathsPaper subject="Mathematics" /> */}
           {/* <Question /> */}
@@ -64,14 +62,15 @@ import { connect } from "react-redux";
   );
 }
 
-MathsHome.propTypes = {
-  auth: PropTypes.object.isRequired
-};
 
+ChemistryHome.propTypes = {
+    auth: PropTypes.object.isRequired
+  };
+  
 const mapStateToProps = state => ({
-  auth: state.auth
-});
-
+    auth: state.auth
+  });
+  
 export default connect(
-  mapStateToProps
-)(MathsHome);
+    mapStateToProps
+  )(ChemistryHome);

@@ -5,6 +5,7 @@ import SubHeader from "../Components/SubHeader";
 import Navbar from "../../Shared//Navbar/Navbar";
 import SubNavbar from "../../Shared//Navbar/SubNavbar";
 import Footer from "../../Shared/Footer";
+import AllCourses from "../../Resources/Lectures/Components/AllCourses";
 
 export default function Home() {
   return (
@@ -13,9 +14,10 @@ export default function Home() {
       <SubNavbar />
       <Header />
       <SubHeader />
-      <div className="container">
-        <LatestArticles />
-      </div>
+      <AllCourses />
+
+      <LatestArticles />
+
       <SubHeader />
       <Footer />
     </div>

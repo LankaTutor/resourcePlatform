@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-class MathFilter extends Component {
+class ChemistryFilter extends Component {
   constructor(props) {
     super(props);
   }
@@ -13,12 +13,12 @@ class MathFilter extends Component {
             <div className="card-block mx-2" style={{width:'30%'}}>
               <img
                 className="card-img-top"
-                src="../../images/ICT.jpg"
+                src="../../images/chem.jpg"
                 style={{ width: "100%", height: "200px" }}
                 alt="Card image cap"
               />
               <div className="card-body">
-                <h5 className="card-title">Combined Maths</h5>
+                <h5 className="card-title">Chemistry</h5>
                 <a href="#" className="btn btn-info">
                   Click Here
                 </a>
@@ -31,12 +31,12 @@ class MathFilter extends Component {
             <div className="card-block mx-2" style={{width:'30%'}}>
               <img
                 className="card-img-top"
-                src="../../images/math2.jpg"
+                src="../../images/chem2.jpg"
                 style={{ width: "100%", height: "200px" }}
                 alt="Card image cap"
               />
               <div className="card-body">
-                <h5 className="card-title">Combined Maths</h5>
+                <h5 className="card-title">Chemistry</h5>
                 <a href="#" className="btn btn-info">
                   Click Here
                 </a>
@@ -49,12 +49,12 @@ class MathFilter extends Component {
             <div className="card-block mx-2" style={{width:'30%'}}>
               <img
                 className="card-img-top"
-                src="../../images/math.jpg"
+                src="../../images/chem3.jpg"
                 style={{ width: "100%", height: "200px" }}
                 alt="Card image cap"
               />
               <div className="card-body">
-                <h5 className="card-title">Combined Maths</h5>
+                <h5 className="card-title">Chemistry</h5>
                 <a href="#" className="btn btn-info">
                   Click Here
                 </a>
@@ -68,12 +68,12 @@ class MathFilter extends Component {
             <div className="card-block mx-2" style={{width:'30%'}}>
               <img
                 className="card-img-top"
-                src="../../images/ICT.jpg"
+                src="../../images/chem.jpg"
                 style={{ width: "100%", height: "200px" }}
                 alt="Card image cap"
               />
               <div className="card-body">
-                <h5 className="card-title">Combined Maths</h5>
+                <h5 className="card-title">Chemistry</h5>
                 <a href="#" className="btn btn-info">
                   Click Here
                 </a>
@@ -86,12 +86,12 @@ class MathFilter extends Component {
             <div className="card-block mx-2" style={{width:'30%'}}>
               <img
                 className="card-img-top"
-                src="../../images/math2.jpg"
+                src="../../images/chem2.jpg"
                 style={{ width: "100%", height: "200px" }}
                 alt="Card image cap"
               />
               <div className="card-body">
-                <h5 className="card-title">Combined Maths</h5>
+                <h5 className="card-title">Chemistry</h5>
                 <a href="#" className="btn btn-info">
                   Click Here
                 </a>
@@ -104,12 +104,12 @@ class MathFilter extends Component {
             <div className="card-block mx-2" style={{width:'30%'}}>
               <img
                 className="card-img-top"
-                src="../../images/math.jpg"
+                src="../../images/chem3.jpg"
                 style={{ width: "100%", height: "200px" }}
                 alt="Card image cap"
               />
               <div className="card-body">
-                <h5 className="card-title">Combined Maths</h5>
+                <h5 className="card-title">Chemistry</h5>
                 <a href="#" className="btn btn-info">
                   Click Here
                 </a>
@@ -123,4 +123,5 @@ class MathFilter extends Component {
   }
 }
 
-export default MathFilter;
+export default ChemistryFilter;
+
