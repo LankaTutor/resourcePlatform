@@ -9,14 +9,14 @@ import PastPaper from "../../Components/mentors/PastPaper";
 //import MathsPaper from "../../Components/mentors/Maths";
 import PhysicsPaper from "../../Components/mentors/PhysicsPastPaper";
 import PhysicsFilter from "../../Components/students/PhysicsFilter";
-
-export default function PhysicsHome() {
-  // const isStudent = false;
-  // const medium = english;
-  const details = {
-    isStudent: false,
-    medium: ["tamil", "sinhala", "english"],
-  };
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+function PhysicsHome(props) {
+    const {user} = props.auth
+    const details = {
+      role: user.role,
+      medium: ["tamil", "sinhala", "english"],
+    };
 
   return (
     <div>
@@ -47,7 +47,7 @@ export default function PhysicsHome() {
               </li>
             </ol>
           </nav>
-          {details.isStudent ? (
+          {details.role === "student" ? (
             <PhysicsFilter />
           ) : (
             <PhysicsPaper subject="Physics" medium="english" />
@@ -60,3 +60,15 @@ export default function PhysicsHome() {
     </div>
   );
 }
+
+PhysicsHome.propTypes = {
+    auth: PropTypes.object.isRequired
+  };
+  
+const mapStateToProps = state => ({
+    auth: state.auth
+  });
+  
+export default connect(
+    mapStateToProps
+  )(PhysicsHome);
