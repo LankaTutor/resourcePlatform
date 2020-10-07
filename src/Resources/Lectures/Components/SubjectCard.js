@@ -7,8 +7,6 @@ import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
-import Avatar from "@material-ui/core/Avatar";
-import Divider from "@material-ui/core/Divider";
 
 const useStyles = makeStyles({
   root: {
@@ -19,29 +17,17 @@ const useStyles = makeStyles({
   },
 });
 
-function CardArticle({ title, description, img, author, avatar }) {
+function CourseCard({ subject, img }) {
   const classes = useStyles();
 
   return (
     <div>
       <Card className={classes.root}>
         <CardActionArea>
-          <CardMedia className={classes.media} image={img} title={title} />
-          <CardActions>
-            <Button size="small" color="primary">
-              <Avatar alt={author} src={avatar} />
-            </Button>
-            <Button size="small" color="primary">
-              {author}
-            </Button>
-          </CardActions>
-          <Divider />
+          <CardMedia className={classes.media} image={img} title={subject} />
           <CardContent>
-            <Typography gutterBottom variant="body1" component="h2">
-              {title}
-            </Typography>
-            <Typography variant="body2" color="textSecondary" component="p">
-              {description}
+            <Typography gutterBottom variant="h5" component="h2">
+              {subject}
             </Typography>
           </CardContent>
         </CardActionArea>
@@ -50,4 +36,4 @@ function CardArticle({ title, description, img, author, avatar }) {
   );
 }
 
-export default CardArticle;
+export default CourseCard;
