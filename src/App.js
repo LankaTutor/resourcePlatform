@@ -41,6 +41,7 @@ import Upload from "./Resources/Paper/Components/upload/Upload";
 //import Content from "./UserProfile/Components/Content";
 
 import AdminDashboard from "./Admin/AdminDashboard";
+import StudentDashboard from "./Students/StudentDashboard";
 import SigninPage from "./UserAuth/Pages/SigninPage";
 // Check for token to keep user logged in
 if (localStorage.jwtToken) {
@@ -121,6 +122,9 @@ class App extends Component {
 
             <Route exact path="/mentors">
               <MentorProfile />
+            </Route>
+            <Route exact path="/students">
+              <StudentDashboard />
             </Route>
             <Route path="/admin" exact>
               <AdminDashboard />

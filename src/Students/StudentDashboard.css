@@ -1,0 +1,22 @@
+.studentDashboard {
+    display: flex;
+  }
+  
+  .studentDashboard__container {
+    margin-left: 20px;
+    margin-top: 50px;
+    align-items: center;
+    min-width: max-content;
+  
+  }
+  
+  link {
+    text-decoration: none;
+  }
+  
+  
+  
+  a {
+    text-decoration: none;
+  }
+  
