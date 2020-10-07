@@ -8,6 +8,7 @@ import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 import Collapse from '@material-ui/core/Collapse';
 import MenuIcon from '@material-ui/icons/Menu';
+import HomeIcon from '@material-ui/icons/Home';
 import MenuBookIcon from '@material-ui/icons/MenuBook';
 import TrendingUpIcon from '@material-ui/icons/TrendingUp';
 import ForumIcon from '@material-ui/icons/Forum';
@@ -55,6 +56,12 @@ function StudentSidebar() {
         </div>
         <Divider />
          <List style={{ color: "#ededed" }}>
+         <ListItem button>
+            <ListItemIcon>
+              <HomeIcon style={{ color: "#ededed" }}/>
+            </ListItemIcon>
+            <ListItemText primary="Home" />
+          </ListItem>
           <ListItem button onClick={handleClick}>
             <ListItemIcon>
               <MenuIcon style={{ color: "#ededed" }} />
