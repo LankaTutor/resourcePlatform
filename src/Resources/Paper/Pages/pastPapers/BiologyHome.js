@@ -9,14 +9,16 @@ import PastPaper from "../../Components/mentors/PastPaper";
 //import MathsPaper from "../../Components/mentors/Maths";
 import BioPaper from "../../Components/mentors/BioPastPaper";
 import BioFilter from "../../Components/students/BioFilter";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
 
-export default function BiologyHome() {
-  // const isStudent = false;
-  // const medium = english;
-  const details = {
-    isStudent: false,
-    medium: ["tamil", "sinhala", "english"],
-  };
+
+function BiologyHome(props) {
+    const {user} = props.auth
+    const details = {
+      role: user.role,
+      medium: ["tamil", "sinhala", "english"],
+    };
 
   return (
     <div>
@@ -47,7 +49,7 @@ export default function BiologyHome() {
               </li>
             </ol>
           </nav>
-          {details.isStudent ? (
+          {details.role==="student" ? (
             <BioFilter />
           ) : (
             <BioPaper subject="Biology" medium="english" />
@@ -60,3 +62,15 @@ export default function BiologyHome() {
     </div>
   );
 }
+
+BiologyHome.propTypes = {
+    auth: PropTypes.object.isRequired
+  };
+  
+const mapStateToProps = state => ({
+    auth: state.auth
+  });
+  
+export default connect(
+    mapStateToProps
+  )(BiologyHome);
