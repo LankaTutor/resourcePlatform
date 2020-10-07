@@ -50,7 +50,7 @@ export default function MathsHome() {
           {details.isStudent ? (
             <MathFilter />
           ) : (
-            <MathsPaper subject="Mathematics" medium="english" />
+            <MathsPaper subject="Maths" medium="english" />
           )}
           {/* <MathsPaper subject="Mathematics" /> */}
           {/* <Question /> */}
