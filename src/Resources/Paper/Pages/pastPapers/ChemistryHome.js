@@ -9,14 +9,15 @@ import PastPaper from "../../Components/mentors/PastPaper";
 //import MathsPaper from "../../Components/mentors/Maths";
 import ChemistryPaper from "../../Components/mentors/ChemistryPastPaper";
 import ChemistryFilter from "../../Components/students/ChemistryFilter";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
 
-export default function ChemistryHome() {
-  // const isStudent = false;
-  // const medium = english;
-  const details = {
-    isStudent: false,
-    medium: ["tamil", "sinhala", "english"],
-  };
+function ChemistryHome(props) {
+    const {user} = props.auth
+    const details = {
+      role: user.role,
+      medium: ["tamil", "sinhala", "english"],
+    };
 
   return (
     <div>
@@ -47,7 +48,7 @@ export default function ChemistryHome() {
               </li>
             </ol>
           </nav>
-          {details.isStudent ? (
+          {details.role==="student" ? (
             <ChemistryFilter />
           ) : (
             <ChemistryPaper subject="Chemistry" medium="english" />
@@ -60,3 +61,16 @@ export default function ChemistryHome() {
     </div>
   );
 }
+
+
+ChemistryHome.propTypes = {
+    auth: PropTypes.object.isRequired
+  };
+  
+const mapStateToProps = state => ({
+    auth: state.auth
+  });
+  
+export default connect(
+    mapStateToProps
+  )(ChemistryHome);
