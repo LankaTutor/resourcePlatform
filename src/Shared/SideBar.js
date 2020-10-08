@@ -32,7 +32,7 @@ export default class SideBar extends Component {
         icon:"fa-atom"
       },
       {
-        title: "Information Technology",
+        title: "ICT",
         content_number: 5,
         color: "list-group-item-secondary",
         icon:"fa-laptop-code"
