@@ -8,10 +8,7 @@ import classnames from "classnames";
 
 import "./UserAuth.scss";
 
-import {
-  FacebookLoginButton,
-  GoogleLoginButton,
-} from "react-social-login-buttons";
+import { FacebookLoginButton, GoogleLoginButton } from "react-social-login-buttons";
 
 class LoginForm extends Component {
   constructor() {
