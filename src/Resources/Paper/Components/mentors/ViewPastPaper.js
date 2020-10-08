@@ -2,9 +2,12 @@ import React, { useEffect, useState } from "react";
 import DeleteIcon from "@material-ui/icons/Delete";
 import EditIcon from "@material-ui/icons/Edit";
 import axios from "axios";
+import {useSelector} from 'react-redux';
 
 function ViewPastPaper(props) {
   const [data, setData] = useState([]);
+  const isAuth = useSelector((state)=>state.auth.isAuthenticated);
+  
   axios.get(`/api/pastpapers/${props.subject}`).then((response) => {
     setData(response.data);
   });

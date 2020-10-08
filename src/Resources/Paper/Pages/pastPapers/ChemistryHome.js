@@ -48,10 +48,10 @@ function ChemistryHome(props) {
               </li>
             </ol>
           </nav>
-          {details.role==="student" ? (
-            <ChemistryFilter />
-          ) : (
+          {details.role === "mentor"? (
             <ChemistryPaper subject="Chemistry" medium="english" />
+          ) : (
+            <ChemistryFilter />
           )}
           {/* <MathsPaper subject="Mathematics" /> */}
           {/* <Question /> */}

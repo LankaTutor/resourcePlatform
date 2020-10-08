@@ -48,10 +48,10 @@ function ICTHome(props) {
               </li>
             </ol>
           </nav>
-          {details.role==="student" ? (
-            <ICTFilter />
-          ) : (
+          {details.role === "mentor"? (
             <ICTPaper subject="ICT" medium="english" />
+          ) : (
+            <ICTFilter />
           )}
           {/* <MathsPaper subject="Mathematics" /> */}
           {/* <Question /> */}

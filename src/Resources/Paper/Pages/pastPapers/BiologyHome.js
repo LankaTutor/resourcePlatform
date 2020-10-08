@@ -49,10 +49,10 @@ function BiologyHome(props) {
               </li>
             </ol>
           </nav>
-          {details.role==="student" ? (
-            <BioFilter />
-          ) : (
+          {details.role === "mentor"? (
             <BioPaper subject="Biology" medium="english" />
+          ) : (
+            <BioFilter />
           )}
           {/* <MathsPaper subject="Mathematics" /> */}
           {/* <Question /> */}
