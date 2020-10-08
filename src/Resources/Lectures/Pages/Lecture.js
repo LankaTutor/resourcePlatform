@@ -8,7 +8,6 @@ function Lecture() {
     <div>
       <Navbar />
       <SubNavbar />
-      <PageHeader title="Alevel Subjects" subTitle="Boost your knowledge" />
       <AllSubjects />
     </div>
   );
