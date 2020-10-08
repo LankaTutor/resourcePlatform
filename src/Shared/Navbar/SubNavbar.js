@@ -31,82 +31,82 @@ export default function SubNavbar(){
           >
             <div className="navbar-nav ml-auto">
               <h6 className="mr-4">
-              {isAuth?
+              {/* {isAuth? */}
                 <a href="/pastpapers">
                   <i className="fas fa-book mr-2"></i>
                   Pastpapers
                 </a>
-                :
+                {/* :
                 <a href="#">
                   <i className="fas fa-book mr-2"></i>
                   Pastpapers
                 </a>
-              }
+              } */}
               </h6>
               <h6 className="mr-4">
-              {isAuth?
+              {/* {isAuth? */}
                 <a href="/exampapers">
                   <i className="far fa-copy mr-2"></i>
                   Exampapers
                 </a>
-                :
+                {/* :
                 <a href="/#">
                   <i className="far fa-copy mr-2"></i>
                   Exampapers
                 </a>
-              }
+              } */}
               </h6>
               <h6 className="mr-4">
-              {isAuth?
+              {/* {isAuth? */}
                 <a href="/shortnotes">
                   <i className="far fa-sticky-note mr-2"></i>
                   Short Notes
                 </a>
-                :
+                {/* :
                 <a href="#">
                   <i className="far fa-sticky-note mr-2"></i>
                   Short Notes
                 </a>
-              } 
+              }  */}
               </h6>
               <h6 className="mr-4">
-              {isAuth?
+              {/* {isAuth? */}
                 <a href="/questionbank">
                   <i className="fa fa-fire mr-2"></i>
                   Question Bank
                 </a>
-                :
+                {/* :
                 <a href="#">
                   <i className="fa fa-fire mr-2"></i>
                   Question Bank
                 </a>
-              }
+              } */}
               </h6>
               <h6 className="mr-4">
-              {isAuth?
+              {/* {isAuth? */}
                 <a href="/articles">
                   <i className="far fa-newspaper mr-2"></i>
                   Articles
                 </a>
-                :
+                {/* :
                 <a href="#">
                   <i className="far fa-newspaper mr-2"></i>
                   Articles
                 </a>
-              } 
+              }  */}
               </h6>
               <h6>
-              {isAuth?
+              {/* {isAuth? */}
                 <a href="/forum">
                   <i className="fa fa-question-circle mr-2"></i>
                   Forum
                 </a>
-                :
+                {/* :
                 <a href="#">
                   <i className="fa fa-question-circle mr-2"></i>
                   Forum
                 </a>
-              }
+              } */}
               </h6>
             </div>
           </div>
