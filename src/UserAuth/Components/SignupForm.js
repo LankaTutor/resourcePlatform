@@ -16,6 +16,7 @@ class SignupForm extends Component {
       email: "",
       password: "",
       password2: "",
+      role:"student",
       errors: {},
     };
   }
@@ -45,6 +46,7 @@ class SignupForm extends Component {
     const newUser = {
       fullname: this.state.fullname,
       email: this.state.email,
+      role:this.state.role,
       password: this.state.password,
       password2: this.state.password2,
     };
@@ -100,6 +102,23 @@ class SignupForm extends Component {
                 />
                 <span className="red-text" style={{ color: "red" }}>
                   {errors.email}
+                </span>
+              </div>
+              <div>
+                {/* <label htmlFor="username">Full name</label> */}
+                <input
+                  type="text"
+                  name="role"
+                  id="role"
+                  hidden
+                  value={this.state.role}
+                  error={errors.role}
+                  className={classnames("", {
+                    invalid: errors.role,
+                  })}
+                />
+                <span className="red-text" style={{ color: "red" }}>
+                  {errors.role}
                 </span>
               </div>
               <div className="form-group">

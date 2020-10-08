@@ -9,14 +9,15 @@ import PastPaper from "../../Components/mentors/PastPaper";
 //import MathsPaper from "../../Components/mentors/Maths";
 import ICTPaper from "../../Components/mentors/ICTPastPaper";
 import ICTFilter from "../../Components/students/ICTFilter";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
 
-export default function ICTHome() {
-  // const isStudent = false;
-  // const medium = english;
-  const details = {
-    isStudent: false,
-    medium: ["tamil", "sinhala", "english"],
-  };
+function ICTHome(props) {
+    const {user} = props.auth
+    const details = {
+      role: user.role,
+      medium: ["tamil", "sinhala", "english"],
+    };
 
   return (
     <div>
@@ -47,7 +48,7 @@ export default function ICTHome() {
               </li>
             </ol>
           </nav>
-          {details.isStudent ? (
+          {details.role==="student" ? (
             <ICTFilter />
           ) : (
             <ICTPaper subject="ICT" medium="english" />
@@ -60,3 +61,15 @@ export default function ICTHome() {
     </div>
   );
 }
+
+ICTHome.propTypes = {
+    auth: PropTypes.object.isRequired
+  };
+  
+const mapStateToProps = state => ({
+    auth: state.auth
+  });
+  
+export default connect(
+    mapStateToProps
+  )(ICTHome);

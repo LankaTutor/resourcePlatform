@@ -10,13 +10,16 @@ import PastPaper from "../../Components/mentors/PastPaper";
 import MathsPaper from "../../Components/mentors/MathPastPaper";
 import MathFilter from "../../Components/students/MathFilter";
 
-export default function MathsHome() {
-  // const isStudent = false;
-  // const medium = english;
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+
+ function MathsHome(props) {
+  const {user} = props.auth
   const details = {
-    isStudent: false,
+    role: user.role,
     medium: ["tamil", "sinhala", "english"],
   };
+  
 
   return (
     <div>
@@ -47,10 +50,10 @@ export default function MathsHome() {
               </li>
             </ol>
           </nav>
-          {details.isStudent ? (
+          {details.role === "student" ? (
             <MathFilter />
           ) : (
-            <MathsPaper subject="Mathematics" medium="english" />
+            <MathsPaper subject="Maths" medium="english" />
           )}
           {/* <MathsPaper subject="Mathematics" /> */}
           {/* <Question /> */}
@@ -60,3 +63,15 @@ export default function MathsHome() {
     </div>
   );
 }
+
+MathsHome.propTypes = {
+  auth: PropTypes.object.isRequired
+};
+
+const mapStateToProps = state => ({
+  auth: state.auth
+});
+
+export default connect(
+  mapStateToProps
+)(MathsHome);
