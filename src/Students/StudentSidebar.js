@@ -38,7 +38,7 @@ const useStyles = makeStyles((theme) => ({
 function StudentSidebar() {
 
   const classes = useStyles();
-  const [open, setOpen] = React.useState(true);
+  const [open, setOpen] = useState(true);
 
   const handleClick = () => {
     setOpen(!open);
