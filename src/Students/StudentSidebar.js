@@ -38,7 +38,7 @@ const useStyles = makeStyles((theme) => ({
 function StudentSidebar() {
 
   const classes = useStyles();
-  const [open, setOpen] = React.useState(true);
+  const [open, setOpen] = useState(true);
 
   const handleClick = () => {
     setOpen(!open);
@@ -57,8 +57,8 @@ function StudentSidebar() {
         <Divider />
          <List style={{ color: "#ededed" }}>
          <ListItem button>
-            <ListItemIcon>
-              <HomeIcon style={{ color: "#ededed" }}/>
+            <ListItemIcon >
+              <HomeIcon style={{ color: "#ededed" }} />
             </ListItemIcon>
             <ListItemText primary="Home" />
           </ListItem>

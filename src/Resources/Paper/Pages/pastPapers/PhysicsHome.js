@@ -47,10 +47,10 @@ function PhysicsHome(props) {
               </li>
             </ol>
           </nav>
-          {details.role === "student" ? (
-            <PhysicsFilter />
+          {details.role === "mentor"? (
+            <PhysicsPaper subject="Physics" />
           ) : (
-            <PhysicsPaper subject="Physics" medium="english" />
+            <PhysicsFilter subject="Physics"/>
           )}
           {/* <MathsPaper subject="Mathematics" /> */}
           {/* <Question /> */}

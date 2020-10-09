@@ -31,6 +31,10 @@ import Dashboard from "./UserAuth/dashboard/Dashboard";
 import PastPaper from "./Resources/Paper/Pages/pastPapers/PaperHome";
 import AddPastPaperAnswer from "./Resources/Paper/Components/mentors/AddPastPaperAnswer";
 import MathsPaper from "./Resources/Paper/Pages/pastPapers/MathsHome";
+import PhysicsPaper from './Resources/Paper/Pages/pastPapers/PhysicsHome';
+import BiologyPaper from './Resources/Paper/Pages/pastPapers/BiologyHome';
+import ChemistryPaper from './Resources/Paper/Pages/pastPapers/ChemistryHome';
+import ICTPaper from './Resources/Paper/Pages/pastPapers/ICTHome';
 import NotFoundPage from "./NotFound/NotFoundPage";
 
 //import Upload from "./Paper/Components/upload/Upload";
@@ -113,6 +117,19 @@ class App extends Component {
             <Route exact path="/pastpapers/Mathematics">
               <MathsPaper />
             </Route>
+            <Route exact path="/pastpapers/Physics">
+              <PhysicsPaper />
+            </Route>
+            <Route exact path="/pastpapers/Biology">
+              <BiologyPaper />
+            </Route>
+            <Route exact path="/pastpapers/Chemistry">
+              <ChemistryPaper />
+            </Route>
+            <Route exact path="/pastpapers/ICT">
+              <ICTPaper />
+            </Route>
+
 
             {/* <Route path="/pastpapers/Mathematics/addAnswer">
               <AddPastPaperAnswer />

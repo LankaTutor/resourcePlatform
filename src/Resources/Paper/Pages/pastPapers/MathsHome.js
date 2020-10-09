@@ -50,10 +50,10 @@ import { connect } from "react-redux";
               </li>
             </ol>
           </nav>
-          {details.role === "student" ? (
-            <MathFilter />
+          {details.role === "mentor"? (
+            <MathsPaper subject="Maths"/>
           ) : (
-            <MathsPaper subject="Maths" medium="english" />
+            <MathFilter subject="Maths" />
           )}
           {/* <MathsPaper subject="Mathematics" /> */}
           {/* <Question /> */}
