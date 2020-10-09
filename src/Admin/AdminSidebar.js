@@ -40,7 +40,7 @@ function AdminSidebar() {
             to="/admin/lectures"
             style={{ textDecoration: "none", color: "#ffffff" }}
           >
-            <ListItemText primary="Lectures" />
+            <ListItemText primary="Videos" />
           </Link>
         </ListItem>
         <ListItem button>

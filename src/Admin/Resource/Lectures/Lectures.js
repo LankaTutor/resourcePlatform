@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import AddLecture from "./Components/AddLecture";
 import ViewLectures from "./Components/ViewLectures.js";
 
-const options = ["Add Lecture", "View Lectures", "Generate Report"];
+const options = ["Add Video", "View Videos"];
 function Lectures() {
   const [showView, setShowView] = useState("Add Lecture");
 

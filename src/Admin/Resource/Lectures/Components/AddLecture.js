@@ -45,7 +45,7 @@ function AddLecture() {
           .then((url) => {
             setUrl(url);
 
-            axios.post("/api/resources/lectures", {
+            axios.post("/api/lectures", {
               subject: subject,
               unit: unit,
               language: language,
