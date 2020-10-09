@@ -30,7 +30,7 @@ function ViewPastPaper(props) {
         <tbody>
         {data.length > 0 ? (
           data.map((paper) => (
-            <tr>
+            <tr key={paper._id}>
               <td>{paper.year}</td>
               <td>{paper.subject}</td>
               <td>{paper.language}</td>

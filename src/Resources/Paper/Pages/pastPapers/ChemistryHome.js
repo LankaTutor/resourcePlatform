@@ -49,9 +49,9 @@ function ChemistryHome(props) {
             </ol>
           </nav>
           {details.role === "mentor"? (
-            <ChemistryPaper subject="Chemistry" medium="english" />
+            <ChemistryPaper subject="Chemistry"/>
           ) : (
-            <ChemistryFilter />
+            <ChemistryFilter subject="Chemistry"/>
           )}
           {/* <MathsPaper subject="Mathematics" /> */}
           {/* <Question /> */}

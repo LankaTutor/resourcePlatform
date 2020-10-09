@@ -48,9 +48,9 @@ function PhysicsHome(props) {
             </ol>
           </nav>
           {details.role === "mentor"? (
-            <PhysicsPaper subject="Physics" medium="english" />
+            <PhysicsPaper subject="Physics" />
           ) : (
-            <PhysicsFilter />
+            <PhysicsFilter subject="Physics"/>
           )}
           {/* <MathsPaper subject="Mathematics" /> */}
           {/* <Question /> */}

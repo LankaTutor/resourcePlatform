@@ -51,9 +51,9 @@ import { connect } from "react-redux";
             </ol>
           </nav>
           {details.role === "mentor"? (
-            <MathsPaper subject="Maths" medium="english" />
+            <MathsPaper subject="Maths"/>
           ) : (
-            <MathFilter />
+            <MathFilter subject="Maths" />
           )}
           {/* <MathsPaper subject="Mathematics" /> */}
           {/* <Question /> */}
