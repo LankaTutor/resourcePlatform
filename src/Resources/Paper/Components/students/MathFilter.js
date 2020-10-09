@@ -7,6 +7,11 @@ function MathFilter(props) {
   const images = ["../../images/mathbg.jpg","../../images/math.png","../../images/math2.jpg","../../images/math3.jpg","../../images/math.jpg"];
   const isAuth = useSelector((state)=>state.auth.isAuthenticated);
   
+
+  const handleClick = () => {
+     window.confirm("You need to signup/login to access resources!");
+  };
+
   axios.get(`/api/pastpapers/${props.subject}`).then((response) => {
     setData(response.data);
   });
@@ -25,12 +30,24 @@ function MathFilter(props) {
              <div className="card-body">
                <h5 className="card-title">{paper.subject}-{paper.year}</h5>
                <p>{paper.type}-{paper.language}</p>
-               <a href={paper.fileUrlQues} className="btn btn-info">
-                 Question
-               </a>
-               <a href={paper.fileUrlQues} className="btn btn-warning" style={{float:'right'}}>
-                 Answer
-               </a>
+                {isAuth?(
+                  <a href={paper.fileUrlQues} className="btn btn-info">
+                    Question
+                  </a>
+                ):(
+                  <a onClick={handleClick} className="btn btn-info">
+                    Question
+                  </a>
+                )}
+                 {isAuth?(
+                  <a href={paper.fileUrlQues} className="btn btn-warning" style={{float:'right'}}>
+                    Answer
+                  </a>
+                  ):(
+                    <a onClick={handleClick} className="btn btn-warning" style={{float:'right'}}>
+                    Answer
+                  </a>
+                  )}
                <br />
              </div>
            {/* </div> */}
