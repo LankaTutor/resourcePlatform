@@ -48,7 +48,7 @@ import AdminDashboard from "./Admin/AdminDashboard";
 import StudentDashboard from "./Students/StudentDashboard";
 import SigninPage from "./UserAuth/Pages/SigninPage";
 import Lecture from "./Resources/Lectures/Pages/Lecture";
-import Biology from "./Resources/Lectures/Pages/Biology";
+import SubUnit from "./Resources/Lectures/Pages/SubUnits";
 // Check for token to keep user logged in
 if (localStorage.jwtToken) {
   // Set auth token header auth
@@ -151,8 +151,8 @@ class App extends Component {
             <Route path="/alsubjects" exact>
               <Lecture />
             </Route>
-            <Route path="/alsubjects/biology" exact>
-              <Biology />
+            <Route path="/alsubjects/:id" exact>
+              <SubUnit />
             </Route>
             {/* <Route path="*" component={NotFoundPage} /> */}
             <Route path="*">
