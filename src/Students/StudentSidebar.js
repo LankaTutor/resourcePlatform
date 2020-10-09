@@ -57,8 +57,8 @@ function StudentSidebar() {
         <Divider />
          <List style={{ color: "#ededed" }}>
          <ListItem button>
-            <ListItemIcon>
-              <HomeIcon style={{ color: "#ededed" }}/>
+            <ListItemIcon >
+              <HomeIcon style={{ color: "#ededed" }} />
             </ListItemIcon>
             <ListItemText primary="Home" />
           </ListItem>
