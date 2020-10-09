@@ -31,6 +31,10 @@ import Dashboard from "./UserAuth/dashboard/Dashboard";
 import PastPaper from "./Resources/Paper/Pages/pastPapers/PaperHome";
 import AddPastPaperAnswer from "./Resources/Paper/Components/mentors/AddPastPaperAnswer";
 import MathsPaper from "./Resources/Paper/Pages/pastPapers/MathsHome";
+import PhysicsPaper from './Resources/Paper/Pages/pastPapers/PhysicsHome';
+import BiologyPaper from './Resources/Paper/Pages/pastPapers/BiologyHome';
+import ChemistryPaper from './Resources/Paper/Pages/pastPapers/ChemistryHome';
+import ICTPaper from './Resources/Paper/Pages/pastPapers/ICTHome';
 import NotFoundPage from "./NotFound/NotFoundPage";
 
 //import Upload from "./Paper/Components/upload/Upload";
@@ -44,7 +48,7 @@ import AdminDashboard from "./Admin/AdminDashboard";
 import StudentDashboard from "./Students/StudentDashboard";
 import SigninPage from "./UserAuth/Pages/SigninPage";
 import Lecture from "./Resources/Lectures/Pages/Lecture";
-import Biology from "./Resources/Lectures/Pages/Biology";
+import SubUnit from "./Resources/Lectures/Pages/SubUnits";
 // Check for token to keep user logged in
 if (localStorage.jwtToken) {
   // Set auth token header auth
@@ -113,6 +117,19 @@ class App extends Component {
             <Route exact path="/pastpapers/Mathematics">
               <MathsPaper />
             </Route>
+            <Route exact path="/pastpapers/Physics">
+              <PhysicsPaper />
+            </Route>
+            <Route exact path="/pastpapers/Biology">
+              <BiologyPaper />
+            </Route>
+            <Route exact path="/pastpapers/Chemistry">
+              <ChemistryPaper />
+            </Route>
+            <Route exact path="/pastpapers/ICT">
+              <ICTPaper />
+            </Route>
+
 
             {/* <Route path="/pastpapers/Mathematics/addAnswer">
               <AddPastPaperAnswer />
@@ -134,8 +151,8 @@ class App extends Component {
             <Route path="/alsubjects" exact>
               <Lecture />
             </Route>
-            <Route path="/alsubjects/biology" exact>
-              <Biology />
+            <Route path="/alsubjects/:id" exact>
+              <SubUnit />
             </Route>
             {/* <Route path="*" component={NotFoundPage} /> */}
             <Route path="*">

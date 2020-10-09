@@ -1,8 +1,9 @@
 import React from "react";
-import { useHistory } from "react-router-dom";
+import { useHistory, Link } from "react-router-dom";
 import "./Navbar.scss";
 import {useSelector,useDispatch} from 'react-redux';
 import { logoutUser } from "../../actions/authActions";
+import Avatar from "@material-ui/core/Avatar";
 
 
 export default function Navbar() {
@@ -53,6 +54,16 @@ export default function Navbar() {
             <ul className="navbar-nav mr-auto">
               <li className="nav-item">
               <button type="button" class="btn btn-light" onClick={onLogoutClick}>Logout</button>
+                <Link className="nav-link" onClick={onLogoutClick}>
+                  Logout
+                </Link>
+                {/* <button type="button" class="btn btn-light" onClick={onLogoutClick}>Logout</button> */}
+              </li>
+              <li class="nav-item">
+                <a class="nav-link p-0" href="/student">
+                  <img src="../../Images/avatar.png" class="rounded-circle z-depth-0"
+                    alt="avatar image" height="40"/>
+                </a>
               </li>
             </ul>
           </span>

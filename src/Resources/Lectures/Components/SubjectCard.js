@@ -7,7 +7,7 @@ import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
-
+import { Link } from "react-router-dom";
 const useStyles = makeStyles({
   root: {
     maxWidth: 290,
@@ -19,16 +19,18 @@ const useStyles = makeStyles({
 
 function CourseCard({ subject, img }) {
   const classes = useStyles();
-
+  const url = subject.toLowerCase();
   return (
     <div>
       <Card className={classes.root}>
         <CardActionArea>
           <CardMedia className={classes.media} image={img} title={subject} />
           <CardContent>
-            <Typography gutterBottom variant="h5" component="h2">
-              {subject}
-            </Typography>
+            <Link to={`/alsubjects/${url}`}>
+              <Typography gutterBottom variant="h5" component="h2">
+                {subject}
+              </Typography>
+            </Link>
           </CardContent>
         </CardActionArea>
       </Card>
