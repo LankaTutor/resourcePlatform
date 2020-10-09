@@ -23,7 +23,7 @@ export default function Navbar() {
     <nav className="navbar navbar-expand-lg navbar-custom navbar-light bg-light">
       <a className="navbar-brand header-container__logo" href="/">
         <img src="https://i.ya-webdesign.com/images/libro-vector-book-5.png" width="40" height="40" class="" alt="" />
-        Tutor Lanka </a>
+        Lanka Tutor </a>
       <div className="container">
         <ul className="navbar-nav mr-auto">
           <li className="nav-item">
