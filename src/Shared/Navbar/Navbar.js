@@ -54,9 +54,9 @@ export default function Navbar() {
             <ul className="navbar-nav mr-auto">
               <li className="nav-item">
               <button type="button" class="btn btn-light" onClick={onLogoutClick}>Logout</button>
-                <Link className="nav-link" onClick={onLogoutClick}>
+                {/* <Link className="nav-link" onClick={onLogoutClick}>
                   Logout
-                </Link>
+                </Link> */}
                 {/* <button type="button" class="btn btn-light" onClick={onLogoutClick}>Logout</button> */}
               </li>
               <li class="nav-item">

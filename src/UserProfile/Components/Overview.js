@@ -29,7 +29,6 @@ class Overview extends Component {
                 <br />
               </div>
             </div>
-
             <div className="card-block mx-2" style={{ width: "30%" }}>
               <img
                 className="card-img-top"
@@ -61,8 +60,6 @@ class Overview extends Component {
                 <br />
               </div>
             </div>
-          </div>
-          <div className="card-deck mt-4">
             <div className="card-block mx-2" style={{ width: "30%" }}>
               <img
                 className="card-img-top"

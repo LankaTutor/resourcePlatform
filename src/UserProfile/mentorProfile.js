@@ -12,7 +12,7 @@ function MentorProfile() {
     <div className="App">
       <Navbar />
       <SubNavbar />
-      <div className="container">
+      <div className="card">
         <Header />
         <UserCard />
       </div>
