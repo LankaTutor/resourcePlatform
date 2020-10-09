@@ -1,13 +1,17 @@
 .sub-header {
   min-height: 200px;
   width: 100%;
-  background: #000
-    url(https://steamuserimages-a.akamaihd.net/ugc/915792633195763470/87A7BD4F1201D418A9B480CCA8E19254A4B9995C/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true)
+  background: #003640
     center;
   color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  .image{
+    display: flex;
+    height: 50%;
+  }
 
   h5 {
     text-transform: uppercase;

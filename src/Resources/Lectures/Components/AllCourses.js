@@ -2,6 +2,9 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
+import ListItemIcon from "@material-ui/core/ListItemIcon";
+import MenuIcon from '@material-ui/icons/Menu';
+import MenuBookIcon from '@material-ui/icons/MenuBook';
 import CourseCard from "./CourseCard";
 import Typography from "@material-ui/core/Typography";
 import VideoLibraryIcon from "@material-ui/icons/VideoLibrary";
@@ -28,16 +31,11 @@ function AllCourses() {
   return (
     <Router>
       <Switch></Switch>
-      <div
-        className={classes.root}
-        style={{
-          padding: "50px",
-        }}
+      <div className={classes.root} style={{ padding: "50px",}}
       >
         <Link to="/alsubjects">
-          <SectionTitle title="Alevel Subjects" icon="fas fa-book" />
+          <SectionTitle title="Subjects"/>
         </Link>
-
         <Grid container spacing={3}>
           <Grid item xs={6} sm={3}>
             <Paper className={classes.paper}>

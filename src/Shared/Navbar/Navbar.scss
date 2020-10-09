@@ -1,3 +1,19 @@
 .navbar-custom {
+  display: flex;
   padding: 0rem !important;
 }
+.header-container__logo {
+  text-align: center;
+  padding-left: 20px;
+  padding-top: 20px;
+  letter-spacing: 0.3rem;
+  font-size: 20px;
+  text-transform: capitalize;
+  color: #ff6004;
+  font-family: "Alegreya Sans SC", sans-serif;
+}
+
+.navbar-brand {
+  color: #ff6004;
+}
+

@@ -1,54 +1,67 @@
 import React from "react";
 import "./Header.scss";
+import Paper from '@material-ui/core/Paper';
+import InputBase from '@material-ui/core/InputBase';
+import Divider from '@material-ui/core/Divider';
+import IconButton from '@material-ui/core/IconButton';
+import MenuIcon from '@material-ui/icons/Menu';
+import SearchIcon from '@material-ui/icons/Search';
+import DirectionsIcon from '@material-ui/icons/Directions';
+import { makeStyles } from '@material-ui/core/styles';
 
 import logo from "../../assets/images/logo.png";
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    padding: '2px 20px',
+    display: 'flex',
+    alignItems: 'center',
+    width: 550,
+    borderRadius: 30,
+    border: '2px solid rgba(15, 124, 144, 0.2)',
+    background: '#f8f9fa',
+    marginLeft:'80px',
+    marginTop: '30px',
+  },
+  input: {
+    marginLeft: theme.spacing(1),
+    flex: 1,
+    color: 'black',
+  },
+  iconButton: {
+    color: '#636363',
+    padding: 10,
+  },
+  divider: {
+    height: 28,
+    margin: 4,
+  },
+}));
+
 export default function Header() {
+  const classes = useStyles();
   return (
     <div className="header-container">
+      <div className="image">
+        <img src="https://image.freepik.com/free-photo/flat-lay-laptop-grey-background_1404-1483.jpg"/>
+      </div>
       <div className="header-container__text">
-        <h1 className="header-container__logo">Tutor Lanka</h1>
-        <h4>You are browsing the best resource for Advanced Level</h4>
-        <div className="input-group md-form form-sm form-1 pl-0 mt-3">
-          <div className="input-group-prepend">
-            <span
-              className="input-group-text bg-secondary lighten-3"
-              id="basic-text1"
-            >
-              <i class="fas fa-search text-white" aria-hidden="true"></i>
-            </span>
-          </div>
-          <input
-            className="form-control my-0 py-1"
-            type="text"
+       <div>
+        <h1 className="header-text">You are browsing the best resource Platform for G.C.E Advanced Level.</h1>
+       </div>
+        <div>
+          <Paper component="form" className={classes.root}>
+          <InputBase
+            className={classes.input}
             placeholder="Search"
-            aria-label="Search"
+            inputProps={{ 'aria-label': 'search' }}
           />
-        </div>
-        <div className="header-container__catogory">
-          <ul>
-            <li>
-              <i className="fas fa-book mr-1"></i>Pastpapers
-            </li>
-            <li>
-              <i className="far fa-copy mr-1"></i>
-              Exampapers
-            </li>
-            <li>
-              <i className="fa fa-fire mr-1"></i>
-              Question Bank
-            </li>
-            <li>
-              <i className="far fa-sticky-note mr-1"></i>
-              Short Notes
-            </li>
-            <li>
-              <i className="far fa-newspaper mr-1"></i>
-              Articles
-            </li>
-          </ul>
+          <IconButton type="submit" className={classes.iconButton} aria-label="search">
+            <SearchIcon />
+          </IconButton>
+          </Paper>
         </div>
       </div>
-      <div className="header-container__overlay"></div>
     </div>
   );
 }

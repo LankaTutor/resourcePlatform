@@ -15,6 +15,18 @@ const useStyles = makeStyles({
   media: {
     height: 150,
   },
+  button1: {
+    border: '2px solid rgba(63, 81, 181, 0.8)',
+    background:'#3f51b5',
+    color: 'white',
+    '&:hover':{
+      color:'#3f51b5',
+    },
+    paddingRight: '10px',
+    paddingLeft: '10px',
+    marginRight:'20px',
+    marginBottom: '10px',
+  },
 });
 
 function CourseCard({ subject, unit, video, img }) {
@@ -36,10 +48,10 @@ function CourseCard({ subject, unit, video, img }) {
           </CardContent>
         </CardActionArea>
         <CardActions>
-          <Button size="small" color="primary">
+          <Button className={classes.button1} size="small" >
             Enroll Now
           </Button>
-          <Button size="small" color="primary">
+          <Button className={classes.button2} size="small" color="primary">
             Learn More
           </Button>
         </CardActions>
