@@ -1,9 +1,9 @@
 .studentSidebar {
-  border-right: 2px solid #333;
+  border-right: 2px solid #eedc3e;
   min-width: 260px;
   padding: 0 20px;
-  background-color: #808b96;
-  height: 100vh;
+  background-color: #015b6b;
+  min-height: 150vh;
 }
 .btnSidebar {
   cursor: pointer;
@@ -13,19 +13,24 @@
 }
 .btnSidebar:hover {
   box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.15),
-    0px 17px 50px 0 rgba(0, 0, 0, 0.15);
 }
 
 .icon {
   color: white;
 }
+.avatar_name {
+  display: flex;
+  font-size: 25px;
+  color: rgb(238, 220, 62);
+  justify-content: center;
+}
 .studentSidebar__avatar {
   display: flex;
   align-items: center;
-  padding: 20px;
-  padding-bottom: 20px;
-  padding-left: 50px;
-  height: 150px;
+  justify-content: center;
+  height: 110px;
+  margin-top: 10px;
+  margin-bottom: 5px;
 }
 
 .adminSidebar__avatar {

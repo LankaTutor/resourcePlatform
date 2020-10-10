@@ -20,7 +20,7 @@ export default class Article extends Component {
             <nav aria-label="breadcrumb">
               <ol class="breadcrumb">
                 <li class="breadcrumb-item">
-                  <a href="#">Home</a>
+                  <a href="/">Home</a>
                 </li>
                 <li class="breadcrumb-item">
                   <a href="#">Library</a>
