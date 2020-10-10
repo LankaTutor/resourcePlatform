@@ -73,8 +73,9 @@ function AddExamPaper() {
     );
   };
   return (
-    <div style={{ width: "73vw" }}>
-      <div>
+    <div className="card" style={{ width: "73vw" }}>
+      <div className="card-header"  style={{ backgroundColor: "#fffac9", color: "#000" }}>Add Exam Papers</div>
+      <div className="card-body">
         <form>
           <div className="form-row mt-3">
             <div className="form-group col-md-6">

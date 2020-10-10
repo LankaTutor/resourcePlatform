@@ -3,7 +3,7 @@ import React from "react";
 function AddQuestions() {
   return (
     <div className="card" style={{ width: "73vw" }}>
-      <div className="card-header">Add Questions</div>
+      <div className="card-header"  style={{ backgroundColor: "#fffac9", color: "#000" }}>Add Questions</div>
       <div className="card-body">
         <form>
           <div className="form-row">

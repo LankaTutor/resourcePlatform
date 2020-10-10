@@ -2,19 +2,20 @@ import React, { useState, useEffect } from "react";
 import AddExamPaper from "./Components/AddExamPaper";
 import ViewExampaper from "./Components/ViewExampaper";
 
-const options = ["Add Exam papers", "View Exam papers", "Generate Report"];
+const options = ["Add Exam papers", "View Exam papers"];
 function ExamPaper() {
-  const [showView, setShowView] = useState("View Exam papers");
+  const [showView, setShowView] = useState("Add Exam papers");
 
   return (
-    <div className="card">
+    <div className="card_full">
       <div className="card-header">
         <div className="btn-group" role="group" aria-label="Basic example">
           {options.map((option) => {
             return (
               <button
                 type="button"
-                className="btn btn-danger mr-2"
+                style={{ backgroundColor: "#db591f", color: "#fff" }}
+                className="btn mr-5"
                 onClick={() => setShowView(option)}
               >
                 {option}

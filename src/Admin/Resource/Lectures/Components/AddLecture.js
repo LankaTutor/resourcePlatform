@@ -66,7 +66,7 @@ function AddLecture() {
 
   return (
     <div className="card" style={{ width: "73vw" }}>
-      <div className="card-header">Add Video</div>
+      <div className="card-header" style={{ backgroundColor: "#fffac9", color: "#000" }}>Add Video</div>
       <div className="card-body">
         <form>
           <div className="form-row">
