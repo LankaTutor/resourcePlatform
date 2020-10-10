@@ -6,9 +6,10 @@ export default function Footer() {
         <div className="footer-container__catogory row">
           <div className="col-lg-1">
             </div>
-            <div className="col-lg-1">
+            <div className="col-lg-2">
               <ul className="list-group">
-                <li><a href="/login">Login</a></li>
+                <li><p1>Have an account?...</p1>
+                <a href="/login">Login</a></li>
                 <li><a href="/signup">Join Us</a></li>
               </ul>
             </div>
@@ -29,7 +30,7 @@ export default function Footer() {
                 <li><a href="#">FAQ's</a></li>
               </ul>
             </div>
-            <div className="col-lg-4">
+            <div className="col-lg-3">
             </div>
             <div className="col-lg-3">
               <a className="footer-logo" href="/">
