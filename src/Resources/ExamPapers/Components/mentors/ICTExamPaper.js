@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
-import AddPastPaperAnswer from "./AddPastPaperAnswer";
-import ViewPastPaper from "./ViewPastPaper";
+import AddExamPaperAnswer from "./AddExamPaperAnswer";
+import ViewExamPaper from "./ViewExamPaper";
 // import ViewExampaper from "./Components/ViewExampaper";
 
 const options = ["Add Past papers", "View Past papers"];
-function PhysicsPastPaper(props) {
+function ICTExamPaper(props) {
   const [showView, setShowView] = useState("View Past papers");
 
   return (
@@ -26,12 +26,12 @@ function PhysicsPastPaper(props) {
       </div>
       <div className="card-body">
         <div className="mt-3">
-          <p>{showView === "Add Past papers" && <AddPastPaperAnswer subject={props.subject}/>}</p>
-          <p>{showView === "View Past papers" && <ViewPastPaper subject={props.subject}/>}</p>
+          <p>{showView === "Add Past papers" && <AddExamPaperAnswer subject={props.subject}/>}</p>
+          <p>{showView === "View Past papers" && <ViewExamPaper subject={props.subject}/>}</p>
         </div>
       </div>
     </div>
   );
 }
 
-export default PhysicsPastPaper;
+export default ICTExamPaper;

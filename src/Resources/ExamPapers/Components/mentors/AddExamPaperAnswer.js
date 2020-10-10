@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { storage } from "../../../../firebase";
 import axios from "axios";
 
-function AddExamPaper() {
+function AddExamPaperAnswer() {
   const [file, setFile] = useState(null);
   const [url, setUrl] = useState("");
   const [progress, setProgress] = useState(0);
@@ -44,7 +44,7 @@ function AddExamPaper() {
           .then((url) => {
             setUrl(url);
 
-            axios.post("/api/exampapers/", {
+            axios.post("/api/exampapers", {
               subject: subject,
               name: name,
               school: school,
@@ -52,15 +52,6 @@ function AddExamPaper() {
               language: language,
               fileUrl: url,
             });
-            // post file inside db ...
-            /*
-            db.collection("exampapers").add({
-              timestamp: firebase.firestore.FieldValue.serverTimestamp(),
-              subject: subject,
-              year: year,
-              language: language,
-              fileUrl: url,
-            });*/
 
             setProgress(0);
             setFile(null);
@@ -72,10 +63,11 @@ function AddExamPaper() {
       }
     );
   };
+
   return (
-    <div style={{ width: "73vw" }}>
+    <div className="container" >
       <div>
-        <form>
+      <form>
           <div className="form-row mt-3">
             <div className="form-group col-md-6">
               <label for="inputSubject">Subject</label>
@@ -161,7 +153,7 @@ function AddExamPaper() {
           </div>
           <div>
             <progress
-              style={{ width: "73vw", height: "20px" }}
+               style={{ width: "100%", height: "20px" }}
               value={progress}
               max="100"
             ></progress>
@@ -180,4 +172,4 @@ function AddExamPaper() {
   );
 }
 
-export default AddExamPaper;
+export default AddExamPaperAnswer;

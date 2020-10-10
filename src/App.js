@@ -28,8 +28,14 @@ import StudentProfilePage from "./UserProfile/Student/Pages/StudentProfilePage";
 import PrivateRoute from "./UserAuth/private-route/PrivateRoute";
 import Dashboard from "./UserAuth/dashboard/Dashboard";
 
+import ExamPaperHome from "./Resources/ExamPapers/Pages/examPapers/ExamPaperHome";
+import MathsExamHome from "./Resources/ExamPapers/Pages/examPapers/MathsExamHome";
+import PhysicsExamHome from "./Resources/ExamPapers/Pages/examPapers/PhysicsExamHome";
+import BiologyExamHome from "./Resources/ExamPapers/Pages/examPapers/BiologyExamHome";
+import ChemistryExamHome from "./Resources/ExamPapers/Pages/examPapers/ChemistryExamHome";
+import ICTExamHome from "./Resources/ExamPapers/Pages/examPapers/ICTExamHome";
+
 import PastPaper from "./Resources/Paper/Pages/pastPapers/PaperHome";
-import AddPastPaperAnswer from "./Resources/Paper/Components/mentors/AddPastPaperAnswer";
 import MathsPaper from "./Resources/Paper/Pages/pastPapers/MathsHome";
 import PhysicsPaper from './Resources/Paper/Pages/pastPapers/PhysicsHome';
 import BiologyPaper from './Resources/Paper/Pages/pastPapers/BiologyHome';
@@ -49,6 +55,7 @@ import StudentDashboard from "./Students/StudentDashboard";
 import SigninPage from "./UserAuth/Pages/SigninPage";
 import Lecture from "./Resources/Lectures/Pages/Lecture";
 import SubUnit from "./Resources/Lectures/Pages/SubUnits";
+
 // Check for token to keep user logged in
 if (localStorage.jwtToken) {
   // Set auth token header auth
@@ -131,9 +138,25 @@ class App extends Component {
             </Route>
 
 
-            {/* <Route path="/pastpapers/Mathematics/addAnswer">
-              <AddPastPaperAnswer />
-            </Route> */}
+            <Route exact path="/exampapers">
+              <ExamPaperHome />
+            </Route>
+            <Route exact path="/exampapers/Mathematics">
+              <MathsExamHome />
+            </Route>
+            <Route exact path="/exampapers/Physics">
+              <PhysicsExamHome />
+            </Route>
+            <Route exact path="/exampapers/Biology">
+              <BiologyExamHome />
+            </Route>
+            <Route exact path="/exampapers/Chemistry">
+              <ChemistryExamHome />
+            </Route>
+            <Route exact path="/exampapers/ICT">
+              <ICTExamHome />
+            </Route>
+
 
             <Route exact path="/upload">
               <Upload />
