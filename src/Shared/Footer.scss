@@ -1,15 +1,53 @@
 .footer-container {
-  background: #000
-    url(https://img.freepik.com/free-photo/watercolor-splash-background_23-2148175602.jpg?size=626&ext=jpg)
+  background: #ffffff
     center;
   color: #fff;
   min-height: 130px;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  margin-top: 80px;
+  margin-bottom: 10px;
+  // justify-content: left;
+  // align-items: left;
   position: relative;
-  border-top: 3px solid green;
+  // border-top: 3px solid green;
+
+  .footer-container__catogory ul {
+    list-style: none;
+    display: flex;
+    grid-gap: 10px;
+    grid-template-columns: repeat(5, 1fr);
+    margin: auto;
+    
+    li {
+      font-size: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .p1{
+      color: #000;
+    }
+  }
+
+  .footer-logo{
+    text-align: center;
+    // padding-left: 20px;
+    // padding-top: 20px;
+    letter-spacing: 0.3rem;
+    font-size: 20px;
+    text-transform: capitalize;
+    color: #ff6004;
+    font-family: "Alegreya Sans SC", sans-serif;
+  }
+  .footer-container__copyright {
+    // margin-top: 0 !important;
+    // padding-top: 0 !important;
+    // text-align: right;
+    text-transform: capitalize;
+    font-size: 13px;
+    color: black;
+  }
 
   .header-container__overlay {
     width: 100%;
@@ -22,41 +60,22 @@
   .footer-container__text {
     z-index: 1;
 
-    .footer-container__logo {
-      text-align: center;
-      letter-spacing: 0.1rem;
-      text-transform: capitalize;
-      color: green;
-      font-size: 28px;
-      font-family: "Alegreya Sans SC", sans-serif;
-      margin-bottom: 0 !important;
-      padding-bottom: 0 !important;
-    }
-    .footer-container__copyright {
-      margin-top: 0 !important;
-      padding-top: 0 !important;
-      text-align: center;
-      text-transform: capitalize;
-      font-size: 10px;
-      color: black;
-    }
+    // .footer-container__logo {
+    //   text-align: center;
+    //   letter-spacing: 0.1rem;
+    //   text-transform: capitalize;
+    //   color: green;
+    //   font-size: 28px;
+    //   font-family: "Alegreya Sans SC", sans-serif;
+    //   margin-bottom: 0 !important;
+    //   padding-bottom: 0 !important;
+    // }
+    
     .footer-container__catogory {
-      margin-top: 20px;
+      margin-top: 30px;
+      margin-left: 40px;
     }
-    .footer-container__catogory ul {
-      list-style: none;
-      display: grid;
-      grid-gap: 40px;
-      grid-template-columns: repeat(5, 1fr);
-      margin: auto;
-
-      li {
-        font-size: 14px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-    }
+    
     .color1 {
       color: black;
     }

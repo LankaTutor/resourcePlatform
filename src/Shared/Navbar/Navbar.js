@@ -17,8 +17,6 @@ export default function Navbar() {
       history.push("/login");
     };
 
-
-
   return (
     <nav className="navbar navbar-expand-lg navbar-custom navbar-light bg-light">
       <a className="navbar-brand header-container__logo" href="/">
