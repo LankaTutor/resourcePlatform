@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import AddLecture from "./Components/AddLecture";
 import ViewLectures from "./Components/ViewLectures.js";
 import { makeStyles } from '@material-ui/core/styles';
-import "./Lectures.css";
+import "./Lectures.scss";
 
 const options = ["Add Lecture", "View Lectures"];
 
