@@ -15,13 +15,13 @@ export default class Article extends Component {
         <Navbar />
         <SubNavbar />
         <PageHeader title="Articles" subTitle="Boost your knowledge" />
-        <div className="article-content container mt-5">
+        <div className="article-content container_fluid mt-5">
           <SideBar />
-          <div className="article-content_full pl-3">
+          <div className="article-content_full">
             <nav aria-label="breadcrumb">
               <ol class="breadcrumb">
                 <li class="breadcrumb-item">
-                  <a href="#">Home</a>
+                  <a href="/">Home</a>
                 </li>
                 <li class="breadcrumb-item">
                   <a href="#">Library</a>
