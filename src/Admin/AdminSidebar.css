@@ -3,7 +3,7 @@
   min-width: 260px;
   padding: 0 20px;
   background-color: #015b6b;
-  height: 118vh;
+  min-height: 150vh;
 }
 .btnSidebar {
   cursor: pointer;
