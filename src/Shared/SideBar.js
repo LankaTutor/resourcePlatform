@@ -9,31 +9,31 @@ export default class SideBar extends Component {
     const Array = [
       {
         title: "Mathematics",
-        content_number: 2,
+        content_number: 4,
         color: "list-group-item-danger",
         icon:"fa-square-root-alt"
       },
       {
         title: "Biology",
-        content_number: 4,
+        content_number: 1,
         color: "list-group-item-primary",
         icon:"fa-heartbeat"
       },
       {
         title: "Physics",
-        content_number: 5,
+        content_number: 1,
         color: "list-group-item-success",
         icon:"fa-microscope"
       },
       {
         title: "Chemistry",
-        content_number: 10,
+        content_number: 1,
         color: "list-group-item-warning",
         icon:"fa-atom"
       },
       {
         title: "ICT",
-        content_number: 5,
+        content_number: 1,
         color: "list-group-item-secondary",
         icon:"fa-laptop-code"
       },

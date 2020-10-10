@@ -44,7 +44,7 @@ function AddExamPaper() {
           .then((url) => {
             setUrl(url);
 
-            axios.post("/api/resources/exampapers", {
+            axios.post("/api/exampapers", {
               subject: subject,
               name: name,
               school: school,
@@ -52,16 +52,7 @@ function AddExamPaper() {
               language: language,
               fileUrl: url,
             });
-            // post file inside db ...
-            /*
-            db.collection("exampapers").add({
-              timestamp: firebase.firestore.FieldValue.serverTimestamp(),
-              subject: subject,
-              year: year,
-              language: language,
-              fileUrl: url,
-            });*/
-
+            
             setProgress(0);
             setFile(null);
             setSubject("");

@@ -5,7 +5,7 @@ import axios from "axios";
 
 function ViewExampaper() {
   const [data, setData] = useState([]);
-  axios.get("/api/resources/exampapers").then((response) => {
+  axios.get("/api/exampapers").then((response) => {
     setData(response.data);
   });
 

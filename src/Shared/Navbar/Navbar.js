@@ -20,7 +20,10 @@ export default function Navbar() {
 
 
   return (
-    <nav className="navbar navbar-expand-sm navbar-dark bg-dark navbar-custom">
+    <nav className="navbar navbar-expand-lg navbar-custom navbar-light bg-light">
+      <a className="navbar-brand header-container__logo" href="/">
+        <img src="https://i.ya-webdesign.com/images/libro-vector-book-5.png" width="40" height="40" class="" alt="" />
+        Lanka Tutor </a>
       <div className="container">
         <ul className="navbar-nav mr-auto">
           <li className="nav-item">
@@ -38,11 +41,11 @@ export default function Navbar() {
               Contact
             </a>
           </li>
-          <li className="nav-item">
+          <li className="nav-item dropdown">
               <select className="form-control">
-                <option selected>English</option>
-                <option value="tamil">Tamil</option>
-                <option value="sinhala">Sinhala</option>
+                <option value="english">English Medium</option>
+                <option value="tamil">Tamil Medium</option>
+                <option value="sinhala">Sinhala Medium</option>
               </select>
           </li>
         </ul>
@@ -50,9 +53,10 @@ export default function Navbar() {
           <span className="navbar-text">
             <ul className="navbar-nav mr-auto">
               <li className="nav-item">
-                <Link className="nav-link" onClick={onLogoutClick}>
+              <button type="button" class="btn btn-light" onClick={onLogoutClick}>Logout</button>
+                {/* <Link className="nav-link" onClick={onLogoutClick}>
                   Logout
-                </Link>
+                </Link> */}
                 {/* <button type="button" class="btn btn-light" onClick={onLogoutClick}>Logout</button> */}
               </li>
               <li class="nav-item">
@@ -72,9 +76,7 @@ export default function Navbar() {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/signup">
-                  Signup
-                </a>
+              <button className="btn btn-outline-warning my-2 my-sm-0"  href="/signup" type="submit"><a href="/signup">Sign up</a></button>
               </li>
             </ul>
           </span>

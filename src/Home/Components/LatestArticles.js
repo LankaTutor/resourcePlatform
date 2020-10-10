@@ -26,7 +26,7 @@ function LatestArticle() {
         padding: "50px",
       }}
     >
-      <SectionTitle title="Latest Article" icon="fas fa-book" />
+      <SectionTitle title="Latest Articles" />
 
       <Grid container spacing={3}>
         <Grid item xs={6} sm={3}>

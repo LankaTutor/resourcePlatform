@@ -8,6 +8,7 @@ import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import { Link } from "react-router-dom";
+import SubUnit from "../Pages/SubUnits";
 
 
 const useStyles = makeStyles({
@@ -31,21 +32,21 @@ const useStyles = makeStyles({
   },
 });
 
-function CourseCard({ subject, subunits, videos, img }) {
+function SubUnitCard({ subject, subunit, unitNo, videos, img }) {
   const classes = useStyles();
 
   return (
     <div>
-      <Link to={`/alsubjects/${subject}`}>
+      <Link to={`/alsubjects/${subject}/${subunit}`}>
       <Card className={classes.root}>
         <CardActionArea>
           <CardMedia className={classes.media} image={img} title={subject} />
           <CardContent>
             <Typography gutterBottom variant="h5" component="h2">
-              {subject}
+              {subunit}
             </Typography>
             <Typography variant="body2" color="textSecondary" component="p">
-              Units : {subunits}
+              {subject}
             </Typography>
             <Typography variant="body2" color="textSecondary" component="p">
               Video : {videos}
@@ -68,4 +69,4 @@ function CourseCard({ subject, subunits, videos, img }) {
   );
 }
 
-export default CourseCard;
+export default SubUnitCard;

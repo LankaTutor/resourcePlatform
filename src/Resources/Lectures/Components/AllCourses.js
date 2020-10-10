@@ -2,6 +2,9 @@ import React, {useState} from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
+import ListItemIcon from "@material-ui/core/ListItemIcon";
+import MenuIcon from '@material-ui/icons/Menu';
+import MenuBookIcon from '@material-ui/icons/MenuBook';
 import CourseCard from "./CourseCard";
 import Typography from "@material-ui/core/Typography";
 import VideoLibraryIcon from "@material-ui/icons/VideoLibrary";
@@ -19,6 +22,7 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.text.secondary,
   },
 }));
+
 function AllCourses() {
   const [data, setData] = useState([]);
   axios.get("/api/subjects").then((response) => {
@@ -33,7 +37,7 @@ function AllCourses() {
       }}
     >
       <Link to="/alsubjects">
-        <SectionTitle title="Alevel Subjects" icon="fas fa-book" />
+        <SectionTitle title="Subjects"/>
       </Link>
 
       <Grid container spacing={3}>
@@ -43,8 +47,8 @@ return(
           <Paper className={classes.paper}>
             <CourseCard
               subject={dat.subject}
-              unit={dat.subunits}
-              video={dat.videos}
+              subunits={dat.subunits}
+              videos={dat.videos}
               img={dat.img}
             />
           </Paper>

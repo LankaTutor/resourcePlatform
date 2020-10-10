@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./Content.css";
 
-class Content extends Component {
+class Overview extends Component {
   constructor(props) {
     super(props);
   }
@@ -29,7 +29,6 @@ class Content extends Component {
                 <br />
               </div>
             </div>
-
             <div className="card-block mx-2" style={{ width: "30%" }}>
               <img
                 className="card-img-top"
@@ -61,8 +60,6 @@ class Content extends Component {
                 <br />
               </div>
             </div>
-          </div>
-          <div className="card-deck mt-4">
             <div className="card-block mx-2" style={{ width: "30%" }}>
               <img
                 className="card-img-top"
@@ -85,4 +82,4 @@ class Content extends Component {
   }
 }
 
-export default Content;
+export default Overview;
