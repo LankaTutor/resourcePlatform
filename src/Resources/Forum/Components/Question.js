@@ -19,7 +19,7 @@ export default class Question extends Component {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src="../../Images/math.jpg"
+              src="../../Images/chem2.jpg"
               alt="Third slide"
               style={{height:'450px'}}
             />
@@ -27,7 +27,31 @@ export default class Question extends Component {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src="../../Images/math2.jpg"
+              src="../../Images/math.png"
+              alt="Third slide"
+              style={{height:'450px'}}
+            />
+          </Carousel.Item>
+          <Carousel.Item>
+            <img
+              className="d-block w-100"
+              src="../../Images/physics2.jpg"
+              alt="First slide"
+              style={{height:'450px'}}
+            />
+          </Carousel.Item>
+          <Carousel.Item>
+            <img
+              className="d-block w-100"
+              src="../../Images/Bio2.jpg"
+              alt="Third slide"
+              style={{height:'450px'}}
+            />
+          </Carousel.Item>
+          <Carousel.Item>
+            <img
+              className="d-block w-100"
+              src="../../Images/Chem3.jpg"
               alt="Third slide"
               style={{height:'450px'}}
             />
