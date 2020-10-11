@@ -20,51 +20,15 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.text.secondary,
   },
 }));
-function SubUnit() {
+function SubUnits() {
   const [datas, setDatas] =  useState([]);
-  axios.get('/api/subunits').then((response)=>{
+  let subject = window.location.href.split("/").pop();
+  axios.get(`/api/subunits/${subject}`).then((response)=>{
     setDatas(response.data);
   })
   const classes = useStyles();
-  let subject = window.location.href.split("/").pop();
-  const mathematics = [{ unit1: "Basic Math" }, { unit2: "Trignometry" }];
-  const physics = [
-   
-    {
-      unit: "2",
-      title: "Mechanics",
-      img:
-        "https://sites.google.com/site/delseaphysics1/_/rsrc/1224176145691/Home/forces/friction/Friction-Lab/Picture%201.png?height=298&width=420",
-      video: "10",
-    },
-    {
-      unit: "3",
-      title: "Osillation and Waves",
-      img:
-        "https://lh6.googleusercontent.com/0EkWa6FIOGkZ8Txy8y5pBfSRqGqgS9DN6AUECqViKPwR91vLFH07DXvaGNYfuHgvONwY-dwwNqTebaDaVdQ2WU5m2ElcBxJ3qU7EyzFACn6cJuTCGm07_x2_L_q-DVnKPO9I-3ac",
-      video: "10",
-    },
-    {
-      unit: "3",
-      title: "Osillation and Waves",
-      img:
-        "https://lh6.googleusercontent.com/0EkWa6FIOGkZ8Txy8y5pBfSRqGqgS9DN6AUECqViKPwR91vLFH07DXvaGNYfuHgvONwY-dwwNqTebaDaVdQ2WU5m2ElcBxJ3qU7EyzFACn6cJuTCGm07_x2_L_q-DVnKPO9I-3ac",
-      video: "10",
-    },
-    {
-      unit: "3",
-      title: "Osillation and Waves",
-      img:
-        "https://lh6.googleusercontent.com/0EkWa6FIOGkZ8Txy8y5pBfSRqGqgS9DN6AUECqViKPwR91vLFH07DXvaGNYfuHgvONwY-dwwNqTebaDaVdQ2WU5m2ElcBxJ3qU7EyzFACn6cJuTCGm07_x2_L_q-DVnKPO9I-3ac",
-      video: "10",
-    },
-  ];
-  let array = [];
-  if (subject == "mathematics") {
-    array = mathematics;
-  } else if (subject == "physics") {
-    array = physics;
-  }
+  
+
   return (
     <div>
       <Navbar />
@@ -93,4 +57,4 @@ function SubUnit() {
   );
 }
 
-export default SubUnit;
+export default SubUnits;

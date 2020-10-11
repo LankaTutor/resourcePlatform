@@ -3,14 +3,14 @@ import DeleteIcon from "@material-ui/icons/Delete";
 import EditIcon from "@material-ui/icons/Edit";
 import axios from "axios";
 
-function ViewExampaper() {
+function ViewExamPaper(props) {
   const [data, setData] = useState([]);
-  axios.get("/api/exampapers/").then((response) => {
+  axios.get(`/api/exampapers/${props.subject}`).then((response) => {
     setData(response.data);
   });
 
   return (
-    <div style={{ width: "73vw" }}>
+    <div>
       <table class="table table-hover">
         <thead>
           <tr>
@@ -49,4 +49,4 @@ function ViewExampaper() {
   );
 }
 
-export default ViewExampaper;
+export default ViewExamPaper;

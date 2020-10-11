@@ -2,19 +2,20 @@ import React, { useState } from "react";
 import AddQuestions from "./Components/AddQuestions";
 import ViewQuestions from "./Components/ViewQuestions";
 
-const options = ["Add Questions", "View Questions", "Generate Report"];
+const options = ["Add Questions", "View Questions"];
 function Questions() {
-  const [showView, setShowView] = useState("View Questions");
+  const [showView, setShowView] = useState("Add Questions");
 
   return (
-    <div className="card">
+    <div className="card_full">
       <div className="card-header text-center">
         <div className="btn-group" role="group" aria-label="Basic example">
           {options.map((option) => {
             return (
               <button
                 type="button"
-                className="btn btn-secondary mr-2"
+                style={{ backgroundColor: "#db591f", color: "#fff" }}
+                className="btn mr-5"
                 onClick={() => setShowView(option)}
               >
                 {option}

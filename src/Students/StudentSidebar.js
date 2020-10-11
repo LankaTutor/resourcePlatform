@@ -29,8 +29,8 @@ const useStyles = makeStyles((theme) => ({
     paddingLeft: theme.spacing(4),
   },
   large: {
-    width: theme.spacing(9),
-    height: theme.spacing(9),
+    width: theme.spacing(12),
+    height: theme.spacing(12),
   },
 }));
 
@@ -52,8 +52,8 @@ function StudentSidebar() {
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSSq7kZ4qPLBXUSDFsH2g5rQY9xAUYSpdbmWw&usqp=CAU"
             className={classes.large}
           />
-          <h6 className="name">Admin One</h6>
         </div>
+        <div className="avatar_name" ><h6>Student 01</h6></div>
         <Divider />
          <List style={{ color: "#ededed" }}>
          <ListItem button>

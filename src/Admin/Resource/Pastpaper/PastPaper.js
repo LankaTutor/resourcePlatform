@@ -3,19 +3,20 @@ import AddPastPaper from "./Components/AddPastPaper";
 import ViewPastpaper from "./Components/ViewPastpaper";
 import "./Pastpaper.css";
 
-const options = ["Add Past papers", "View Past papers", "Generate Report"];
+const options = ["Add Past papers", "View Past papers"];
 function PastPaper() {
-  const [showView, setShowView] = useState("View Past papers");
+  const [showView, setShowView] = useState("Add Past papers");
 
   return (
-    <div className="card pastpaper">
+    <div className="card_full pastpaper">
       <div className="card-header text-center">
         <div className="btn-group" role="group" aria-label="Basic example">
           {options.map((option) => {
             return (
               <button
                 type="button"
-                className="btn btn-secondary mr-2"
+                style={{ backgroundColor: "#db591f", color: "#fff" }}
+                className="btn mr-5"
                 onClick={() => setShowView(option)}
               >
                 {option}
