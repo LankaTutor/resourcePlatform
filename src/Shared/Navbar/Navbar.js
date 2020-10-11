@@ -74,7 +74,9 @@ export default function Navbar() {
                 </a>
               </li>
               <li className="nav-item">
-              <button className="btn btn-outline-warning my-2 my-sm-0"  href="/signup" type="submit"><a href="/signup">Sign up</a></button>
+              {/* <button className="btn btn-outline-warning my-2 my-sm-0"  href="/signup" type="submit"> */}
+                <a className="btn btn-outline-warning my-2 my-sm-0" href="/signup">Sign up</a>
+              {/* </button> */}
               </li>
             </ul>
           </span>
