@@ -15,9 +15,7 @@ export default class Article extends Component {
         <Navbar />
         <SubNavbar />
         <PageHeader title="Articles" subTitle="Boost your knowledge" />
-        <div className="article-content container_fluid mt-5">
-          <SideBar />
-          <div className="article-content_full">
+          <div className="article-content_full mt-5">
             <nav aria-label="breadcrumb">
               <ol class="breadcrumb">
                 <li class="breadcrumb-item">
@@ -33,7 +31,6 @@ export default class Article extends Component {
             </nav>
             <Articles />
           </div>
-        </div>
         <Footer />
       </div>
     );

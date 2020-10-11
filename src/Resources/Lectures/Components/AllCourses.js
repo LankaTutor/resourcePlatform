@@ -54,9 +54,6 @@ return(
           </Paper>
         </Grid>)
         })}
-        
-        
-        
       </Grid>
     </div>
   );

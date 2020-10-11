@@ -6,6 +6,8 @@ import CardArticle from "../../Resources/Article/Components/CardArticle";
 import Typography from "@material-ui/core/Typography";
 import VideoLibraryIcon from "@material-ui/icons/VideoLibrary";
 import SectionTitle from "../../Shared/SectionTitle";
+import { Link } from "react-router-dom";
+import axios from "axios";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -26,8 +28,25 @@ function LatestArticle() {
         padding: "50px",
       }}
     >
-      <SectionTitle title="Latest Articles" />
+      <Link to="/articles">
+        <SectionTitle title="Latest Articles" />
+      </Link>
 
+      {/* <Grid container spacing={3}>
+        {data.map((dat)=> {
+return(
+        <Grid item xs={6} sm={3}>
+          <Paper className={classes.paper}>
+            <CourseCard
+              subject={dat.subject}
+              subunits={dat.subunits}
+              videos={dat.videos}
+              img={dat.img}
+            />
+          </Paper>
+        </Grid>)
+        })}
+      </Grid> */}
       <Grid container spacing={3}>
         <Grid item xs={6} sm={3}>
           <Paper className={classes.paper}>
