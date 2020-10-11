@@ -52,6 +52,7 @@ import Upload from "./Resources/Paper/Components/upload/Upload";
 
 import AdminDashboard from "./Admin/AdminDashboard";
 import StudentDashboard from "./Students/StudentDashboard";
+import MentorDashboard from "./Mentors/MentorDashboard";
 import SigninPage from "./UserAuth/Pages/SigninPage";
 import Lecture from "./Resources/Lectures/Pages/Lecture";
 import SubUnits from "./Resources/Lectures/Pages/SubUnits";
@@ -170,6 +171,10 @@ class App extends Component {
             <Route exact path="/students">
               <StudentDashboard />
             </Route>
+            <Route path="/mentorDashboard" exact>
+              <MentorDashboard />
+            </Route>
+
             <Route path="/admin" exact>
               <AdminDashboard />
             </Route>

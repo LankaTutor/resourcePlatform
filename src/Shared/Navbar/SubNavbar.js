@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: 0,
     color: 'white',
     height: 40,
-    width: 187,
+    width: 263,
     padding: '0 30px',
     boxShadow: '0 3px 5px 2px rgba(0, 54, 64, .0)',
     '&:hover': {
@@ -53,11 +53,11 @@ export default function SubNavbar() {
           <div className="navbar-nav ml-auto">
           */}
             <ButtonGroup className="buttongroup_fluid" variant="contained" aria-label="contained primary button group">
-            <a href="/videos"><Button className={classes.margin}>VIDEOS</Button></a>
+            <a href="/alsubjects"><Button className={classes.margin}>LECTURES</Button></a>
             <a href="/pastpapers"><Button className={classes.margin}>PAST PAPERS</Button></a>
             <a href="/exampapers"><Button className={classes.margin}>EXAM PAPERS</Button></a>
-            <a href="/shortnotes"><Button className={classes.margin}>SHORT NOTES</Button></a>
-            <a href="/questionbank"><Button className={classes.margin}>QUESTION BANK</Button></a>
+            {/* <a href="/shortnotes"><Button className={classes.margin}>SHORT NOTES</Button></a>
+            <a href="/questionbank"><Button className={classes.margin}>QUESTION BANK</Button></a> */}
             <a href="/articles"><Button className={classes.margin}>ARTICLES</Button></a>
             <a href="/forum"><Button className={classes.margin}>FORUM</Button></a>
             </ButtonGroup>

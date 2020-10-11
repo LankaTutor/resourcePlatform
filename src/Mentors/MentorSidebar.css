@@ -1,0 +1,64 @@
+.studentSidebar {
+  border-right: 2px solid #eedc3e;
+  min-width: 260px;
+  padding: 0 20px;
+  background-color: #015b6b;
+  min-height: 150vh;
+}
+.btnSidebar {
+  cursor: pointer;
+}
+.btnSidebar:focus {
+  color: rgb(201, 204, 204);
+}
+.btnSidebar:hover {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.15),
+}
+
+.icon {
+  color: white;
+}
+.avatar_name {
+  display: flex;
+  font-size: 25px;
+  color: rgb(238, 220, 62);
+  justify-content: center;
+}
+.studentSidebar__avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 110px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.adminSidebar__avatar {
+  padding-left: 10px;
+}
+
+.name{
+  color: #ededed;
+  padding-left: 10px;
+}
+
+.studentSidebar__button {
+  width: "100%";
+  max-width: 360;
+}
+
+link {
+  text-decoration: none;
+}
+
+link:active {
+  color: aqua;
+}
+
+a {
+  text-decoration: none;
+}
+
+.button__active {
+  background-color: #ffffff;
+}
