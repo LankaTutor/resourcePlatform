@@ -45,7 +45,7 @@ function AdminSidebar() {
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSSq7kZ4qPLBXUSDFsH2g5rQY9xAUYSpdbmWw&usqp=CAU"
         />
       </div>
-      <div className="avatar_name"><h6>Sivarasa Sivapriyan</h6></div>
+      <div className="avatar_name"><h6>Admin 01</h6></div>
       <Divider />
       <List>
         <ListItem button>

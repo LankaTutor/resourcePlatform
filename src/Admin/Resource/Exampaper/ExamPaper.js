@@ -8,7 +8,7 @@ function ExamPaper() {
 
   return (
     <div className="card_full">
-      <div className="card-header">
+      <div className="card-header" style={{ alignItems: "center", display: "flex", justifyContent: "center"}}>
         <div className="btn-group" role="group" aria-label="Basic example">
           {options.map((option) => {
             return (

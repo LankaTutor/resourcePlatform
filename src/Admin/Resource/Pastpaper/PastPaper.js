@@ -9,7 +9,7 @@ function PastPaper() {
 
   return (
     <div className="card_full pastpaper">
-      <div className="card-header text-center">
+      <div className="card-header text-center" style={{ alignItems: "center", display: "flex", justifyContent: "center"}}>
         <div className="btn-group" role="group" aria-label="Basic example">
           {options.map((option) => {
             return (

@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import AddLecture from "./Components/AddLecture";
 import ViewLectures from "./Components/ViewLectures.js";
 import { makeStyles } from '@material-ui/core/styles';
-import "./Lectures.scss";
 
 const options = ["Add Lecture", "View Lectures"];
 
@@ -12,7 +11,8 @@ function Lectures() {
 
   return (
     <div className="card_full">
-      <div className="card-header">
+      <div className="card-header" style={{ alignItems: "center", display: "flex", justifyContent: "center"}}>     
+        <div className="btn-group" role="group" aria-label="Basic example"> 
           {options.map((option) => {
             return (
               <button
@@ -25,6 +25,7 @@ function Lectures() {
               </button>
             );
           })}
+        </div>
        </div>
       <div className="card-body">
         <div className="mt-5">
