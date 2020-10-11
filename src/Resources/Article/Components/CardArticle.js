@@ -25,6 +25,7 @@ function CardArticle({ title, description, img, author, avatar }) {
 
   return (
     <div>
+      <Link to={`/articles/${title}`}>
       <Card className={classes.root}>
         <CardActionArea>
           <CardMedia className={classes.media} image={img} title={title} />
@@ -47,6 +48,7 @@ function CardArticle({ title, description, img, author, avatar }) {
           </CardContent>
         </CardActionArea>
       </Card>
+    </Link>
     </div>
   );
 }

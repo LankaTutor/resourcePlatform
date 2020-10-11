@@ -56,6 +56,7 @@ import SigninPage from "./UserAuth/Pages/SigninPage";
 import Lecture from "./Resources/Lectures/Pages/Lecture";
 import SubUnits from "./Resources/Lectures/Pages/SubUnits";
 import SubUnit from "./Resources/Lectures/Pages/SubUnit"
+import SingleArticlePage from "./Resources/Article/Pages/SingleArticlePage";
 
 // Check for token to keep user logged in
 if (localStorage.jwtToken) {
@@ -178,6 +179,10 @@ class App extends Component {
             <Route path="/alsubjects/:id" exact>
               <SubUnits />
             </Route>
+            <Route path="/alsubjects/:sid" exact>
+              <SingleArticlePage />
+            </Route>
+            
             <Route path="/alsubjects/:id/:sid" exact>
               <SubUnit />
             </Route>
