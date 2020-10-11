@@ -9,31 +9,26 @@ export default class SideBar extends Component {
     const Array = [
       {
         title: "Mathematics",
-        content_number: 4,
         color: "list-group-item-danger",
         icon:"fa-square-root-alt"
       },
       {
         title: "Biology",
-        content_number: 1,
         color: "list-group-item-primary",
         icon:"fa-heartbeat"
       },
       {
         title: "Physics",
-        content_number: 1,
         color: "list-group-item-success",
         icon:"fa-microscope"
       },
       {
         title: "Chemistry",
-        content_number: 1,
         color: "list-group-item-warning",
         icon:"fa-atom"
       },
       {
         title: "ICT",
-        content_number: 1,
         color: "list-group-item-secondary",
         icon:"fa-laptop-code"
       },
@@ -53,9 +48,6 @@ export default class SideBar extends Component {
                   <i className={`fas ${arr.icon} mr-2`}></i>
                   {arr.title}
                 </div>
-                <span className="badge badge-primary badge-pill">
-                  {arr.content_number}
-                </span>
               </li>
               </NavLink>
               );

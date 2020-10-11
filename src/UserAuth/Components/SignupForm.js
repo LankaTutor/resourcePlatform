@@ -16,7 +16,7 @@ class SignupForm extends Component {
       email: "",
       password: "",
       password2: "",
-      role:"student",
+      role:"",
       errors: {},
     };
   }
@@ -104,8 +104,7 @@ class SignupForm extends Component {
                   {errors.email}
                 </span>
               </div>
-              <div>
-                {/* <label htmlFor="username">Full name</label> */}
+              {/* <div>
                 <input
                   type="text"
                   name="role"
@@ -117,6 +116,16 @@ class SignupForm extends Component {
                     invalid: errors.role,
                   })}
                 />
+                <span className="red-text" style={{ color: "red" }}>
+                  {errors.role}
+                </span>
+              </div> */}
+              <div className="form-group" style={{width:'100%',}}>
+                <select className="form-control" name="role" id="role" style={{border:'none'}}  error={errors.role} onChange={this.onChange}>
+                  <option defaultValue>Choose Role..</option>
+                  <option value="student">Student</option>
+                  <option value="mentor">Mentor</option>
+                </select>
                 <span className="red-text" style={{ color: "red" }}>
                   {errors.role}
                 </span>
