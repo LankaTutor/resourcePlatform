@@ -16,25 +16,41 @@ import BookIcon from "@material-ui/icons/Book";
 import SettingsIcon from "@material-ui/icons/Settings";
 import ExitToAppIcon from "@material-ui/icons/ExitToApp";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
+import { makeStyles } from '@material-ui/core/styles';
 
 import "./AdminSidebar.css";
 import { Link } from "react-router-dom";
 
+const useStyles = makeStyles((theme) => ({
+  root: {
+    display: 'flex',
+    '& > *': {
+      margin: theme.spacing(1),
+    },
+  },
+  large: {
+    width: theme.spacing(12),
+    height: theme.spacing(12),
+  },
+}));
+
 function AdminSidebar() {
+  const classes = useStyles();
   return (
     <div className="adminSidebar">
       <div className="adminSidebar__avatar">
         <Avatar
+          className={classes.large}
           alt="Remy Sharp"
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSSq7kZ4qPLBXUSDFsH2g5rQY9xAUYSpdbmWw&usqp=CAU"
         />
-        <h6>Admin One</h6>
       </div>
+      <div className="avatar_name"><h6>Sivarasa Sivapriyan</h6></div>
       <Divider />
       <List>
         <ListItem button>
           <ListItemIcon>
-            <LaptopChromebookIcon style={{ color: "#641E16" }} />
+            <LaptopChromebookIcon style={{ color: "#ffffff" }} />
           </ListItemIcon>
           <Link
             to="/admin/lectures"
@@ -45,7 +61,7 @@ function AdminSidebar() {
         </ListItem>
         <ListItem button>
           <ListItemIcon>
-            <DateRangeIcon style={{ color: "#512E5F" }} />
+            <DateRangeIcon style={{ color: "#ffffff" }} />
           </ListItemIcon>
           <Link
             to="/admin/pastpapers"
@@ -56,7 +72,7 @@ function AdminSidebar() {
         </ListItem>
         <ListItem button>
           <ListItemIcon>
-            <BookIcon style={{ color: "#7D6608" }} />
+            <BookIcon style={{ color: "#ffffff" }} />
           </ListItemIcon>
           <Link
             to="/admin/exampapers"
@@ -67,7 +83,7 @@ function AdminSidebar() {
         </ListItem>
         <ListItem button>
           <ListItemIcon>
-            <QuestionAnswerIcon style={{ color: "#0E6251" }} />
+            <QuestionAnswerIcon style={{ color: "#ffffff" }} />
           </ListItemIcon>
           <Link
             to="/admin/questions"
@@ -78,7 +94,7 @@ function AdminSidebar() {
         </ListItem>
         <ListItem button>
           <ListItemIcon>
-            <DescriptionIcon style={{ color: "#6E2C00" }} />
+            <DescriptionIcon style={{ color: "#ffffff" }} />
           </ListItemIcon>
           <Link
             to="/admin/resource-management"
@@ -89,7 +105,7 @@ function AdminSidebar() {
         </ListItem>
         <ListItem button>
           <ListItemIcon>
-            <NoteIcon style={{ color: "#2471A3" }} />
+            <NoteIcon style={{ color: "#ffffff" }} />
           </ListItemIcon>
           <Link
             to="/admin/resource-management"
@@ -103,7 +119,7 @@ function AdminSidebar() {
       <List>
         <ListItem button className="btnSidebar">
           <ListItemIcon style={{ color: "#ffffff" }}>
-            <SettingsIcon />
+            <SupervisorAccountIcon />
           </ListItemIcon>
           <Link
             to="/admin/resource-management"
@@ -114,7 +130,7 @@ function AdminSidebar() {
         </ListItem>
         <ListItem button>
           <ListItemIcon>
-            <PersonIcon style={{ color: "#641E16" }} />
+            <PersonIcon style={{ color: "#ffffff" }} />
           </ListItemIcon>
           <Link
             to="/admin/resource-management"
@@ -129,7 +145,7 @@ function AdminSidebar() {
       <List>
         <ListItem button className="btnSidebar">
           <ListItemIcon style={{ color: "#ffffff" }}>
-            <SupervisorAccountIcon />
+            <SettingsIcon />
           </ListItemIcon>
           <Link
             to="/admin/resource-management"

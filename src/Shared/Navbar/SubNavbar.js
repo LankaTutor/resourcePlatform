@@ -34,7 +34,7 @@ export default function SubNavbar() {
 
   return (
     <nav className="mb-1 navbar navbar-expand-lg navbar-light py-3" style={{ boxShadow: "0 0 1px 0" }}>
-      <div className="container">
+      <div className="container_fluid">
         {/* <a className="navbar-brand" href="/">
           TutorLanka
         </a> */}
@@ -52,8 +52,8 @@ export default function SubNavbar() {
         {/* <div className="collapse navbar-collapse" id="navbarSupportedContent-4">
           <div className="navbar-nav ml-auto">
           */}
-            <ButtonGroup className="buttongroup" variant="contained" aria-label="contained primary button group">
-            <a href="/alsubjects"><Button className={classes.margin}>VIDEOS</Button></a>
+            <ButtonGroup className="buttongroup_fluid" variant="contained" aria-label="contained primary button group">
+            <a href="/videos"><Button className={classes.margin}>VIDEOS</Button></a>
             <a href="/pastpapers"><Button className={classes.margin}>PAST PAPERS</Button></a>
             <a href="/exampapers"><Button className={classes.margin}>EXAM PAPERS</Button></a>
             <a href="/shortnotes"><Button className={classes.margin}>SHORT NOTES</Button></a>
