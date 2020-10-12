@@ -6,6 +6,7 @@ import Footer from "../../../Shared/Footer";
 import { makeStyles } from "@material-ui/core/styles";
 import SingleArticle from "../Components/SingleArticle";
 import axios from "axios";
+import { data } from "jquery";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -37,7 +38,8 @@ function SingleArticlePage() {
     <div>
       <Navbar />
       <SubNavbar />
-      <PageHeader title={title} />
+
+      <PageHeader title={data.title} />
       <div style={{ padding: "50px",}}>
           <div className="article-content_full mt-5">
             <nav aria-label="breadcrumb">
@@ -45,11 +47,11 @@ function SingleArticlePage() {
                 <li class="breadcrumb-item">
                   <a href="/">Home</a>
                 </li>
-                <li class="breadcrumb-item">
-                  <a href="#">Library</a>
+                <li href="/articles" class="breadcrumb-item active" aria-current="page">
+                  Articles
                 </li>
                 <li class="breadcrumb-item active" aria-current="page">
-                  Articles
+                  {title}
                 </li>
               </ol>
             </nav>

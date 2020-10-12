@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { storage } from "../../../../firebase";
 import axios from "axios";
 
-const Mathematics = ["Trignometry", "Basic Math"];
 
 function AddLecture() {
   const [file, setFile] = useState(null);
@@ -11,8 +10,24 @@ function AddLecture() {
   const [subject, setSubject] = useState();
   const [unit, setUnit] = useState("");
   const [language, setLanguage] = useState();
-  const [videoID, setVideoID] = useState();
-
+  const [videoNum, setVideoNum] = useState();
+  const mathArray = ['Integrals and Complex numbers', 'Differential Calculas', 'Coordinate Geometry', 'Trignometry', 'Matrices', 'Determinants'];
+  const chemistryArray = ['Atomic Structutre', 'Structure and Bonding', 'Chemical Calcualations', 'Gaseous state of matter', 'Energitics', 'Chemistry of s,p and d block elements', 'Basic concepts of Organic Chemistry', 'Hydorcarbons and halohydrocarbons', 'Oxygen containing organic compounds','Nitrogen containing organic compounds', 'Chemical kinetics', 'Equillibrium', 'Electro Chemistry', 'Industrial chemistry and Environmental pollution']
+  const physicsArray = ['Measurement', 'Mechanics', 'Oscillations and Waves', 'Thermal Physics', 'Gravitaional Field','Electrostatic Field','Magnetic Field', 'Current Electricity', 'Electronics', 'Mechanical Properties of Matter', 'Matters and Radiations'];
+  const biologyArray = ['Introduction to Biology', 'Chemical and Cellular Basis of Life', 'Evolution and Diversity of Organisms','Plant form and Fucntion', 'Animal form and Functions', 'Genetics', 'Molecular Biology and Recombinant DNA Technology', 'Environmental Biology', 'MicroBiology', 'Applied Biology'];
+  
+  let array = [];
+  if (subject == 'Mathematics') {
+    array = mathArray;
+  } else if (subject == 'Physics'){
+    array = physicsArray;
+  }
+  else if (subject == 'Biology'){
+    array = biologyArray;
+  }
+  else if(subject == 'Chemistry'){
+    array = chemistryArray;
+  }
   const handleChange = (e) => {
     if (e.target.files[0]) {
       setFile(e.target.files[0]);
@@ -49,7 +64,7 @@ function AddLecture() {
               subject: subject,
               unit: unit,
               language: language,
-              videoID: videoID,
+              videoNum: videoNum,
               fileUrl: url,
             });
 
@@ -57,6 +72,7 @@ function AddLecture() {
             setFile(null);
             setSubject("");
             setLanguage("");
+            setVideoNum("")
             setUnit("");
             alert("File Uploaded Sucessfully");
           });
@@ -85,7 +101,22 @@ function AddLecture() {
                 <option>Information Technology</option>
               </select>
             </div>
-
+            <div className="form-group col-md-6">
+            <label for="inputUnit">Unit</label>
+              <select
+                id="inputUnit"
+                className="form-control"
+                onChange={(e) => setUnit(e.target.value)}
+              >
+                <option selected>Choose...</option>
+                {array.map((arr) => {
+                  return <option>{arr}</option>;
+                })}
+              </select>
+            </div>
+          </div>
+          <div className="form-row">
+            
             <div className="form-group col-md-6">
               <label for="inputLanguage">Language</label>
               <select
@@ -99,28 +130,13 @@ function AddLecture() {
                 <option>Sinhala</option>
               </select>
             </div>
-          </div>
-          <div className="form-row">
-            <div className="form-group col-md-6">
-              <label for="inputUnit">Unit</label>
-              <select
-                id="inputUnit"
-                className="form-control"
-                onChange={(e) => setUnit(e.target.value)}
-              >
-                <option selected>Choose...</option>
-                {Mathematics.map((math) => {
-                  return <option>{math}</option>;
-                })}
-              </select>
-            </div>
             <div className="form-group col-md-6">
               <label for="inputID">Video Number</label>
               <input
                 id="inputID"
                 className="form-control"
-                value={videoID}
-                onChange={(e) => setVideoID(e.target.value)}
+                value={videoNum}
+                onChange={(e) => setVideoNum(e.target.value)}
               />
             </div>
           </div>

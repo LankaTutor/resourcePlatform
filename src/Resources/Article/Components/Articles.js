@@ -40,6 +40,7 @@ function Articles() {
         <Grid item xs={6} sm={3}>
           <Paper className={classes.paper}>
             <CardArticle
+              id={dat._id}
               title={dat.title}
               description={dat.description}
               author={dat.author}

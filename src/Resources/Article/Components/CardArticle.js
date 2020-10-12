@@ -20,12 +20,13 @@ const useStyles = makeStyles({
   },
 });
 
-function CardArticle({ title, description, img, author, avatar }) {
+function CardArticle({ id, title, description, img, author, avatar }) {
+  const url = id.toString();
   const classes = useStyles();
 
   return (
     <div>
-      <Link to={`/articles/${title}`}>
+      <Link to={`/articles/${url}`}>
       <Card className={classes.root}>
         <CardActionArea>
           <CardMedia className={classes.media} image={img} title={title} />

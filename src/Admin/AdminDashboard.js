@@ -8,6 +8,8 @@ import PastPaper from "./Resource/Pastpaper/PastPaper";
 import ExamPaper from "./Resource/Exampaper/ExamPaper";
 import Questions from "./Resource/Questions/Questions";
 
+import Navbar from "../Shared/Navbar/Navbar";
+
 const routes = [
   {
     path: "/admin/lectures",
@@ -38,6 +40,9 @@ const routes = [
 function AdminDashboard() {
   return (
     <Router>
+      <div>
+        <Navbar />
+
       <div className="adminDashboard">
         <AdminSidebar />
         <div className="adminDashboard__container">
@@ -50,6 +55,7 @@ function AdminDashboard() {
             ></Route>
           ))}
         </div>
+      </div>
       </div>
     </Router>
   );

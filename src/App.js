@@ -118,8 +118,11 @@ class App extends Component {
               component={StudentMessages}
             />
 
-            <Route path="/articles">
+            <Route path="/articles" exact>
               <Article />
+            </Route>
+            <Route path="/articles/:id" exact>
+              <SingleArticlePage />
             </Route>
             <Route exact path="/pastpapers">
               <PastPaper />

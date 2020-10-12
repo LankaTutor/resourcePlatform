@@ -24,10 +24,32 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function AllCourses() {
+
   const [data, setData] = useState([]);
   axios.get("/api/subjects").then((response) => {
     setData(response.data);
   });
+
+  const [Mathematics, setMathematics] = useState([]);
+  const [Physics, setPhysics] = useState([]);
+  const [Chemistry, setChemistry] = useState([]);
+  const [Biology, setBiology] = useState([]);
+  axios.get("/api/lectures/Maths").then((response) => {
+    setMathematics(response.data);
+  });
+
+  axios.get("/api/lectures/Biology").then((response) => {
+    setBiology(response.data);
+  });
+
+  axios.get("/api/lectures/Physics").then((response) => {
+    setPhysics(response.data);
+  });
+
+  axios.get("/api/lectures/Chemistry").then((response) => {
+    setChemistry(response.data);
+  });
+  
   const classes = useStyles();
   return (
     <div
@@ -48,7 +70,7 @@ return(
             <CourseCard
               subject={dat.subject}
               subunits={dat.subunits}
-              videos={dat.videos}
+              videos={dat.subject.length}
               img={dat.img}
             />
           </Paper>

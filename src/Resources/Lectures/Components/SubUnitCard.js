@@ -9,6 +9,7 @@ import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import { Link } from "react-router-dom";
 import SubUnit from "../Pages/SubUnits";
+import {useSelector} from 'react-redux';
 
 
 const useStyles = makeStyles({
@@ -33,11 +34,14 @@ const useStyles = makeStyles({
 });
 
 function SubUnitCard({ subject, subunit, unitNo, videos, img }) {
+  const isAuth = useSelector((state)=>state.auth.isAuthenticated);
+  let url = '';
+  isAuth? url=`/alsubjects/${subject}` : url='/login'; 
   const classes = useStyles();
 
   return (
     <div>
-      <Link to={`/alsubjects/${subject}/${subunit}`}>
+      <Link to={url}>
       <Card className={classes.root}>
         <CardActionArea>
           <CardMedia className={classes.media} image={img} title={subject} />

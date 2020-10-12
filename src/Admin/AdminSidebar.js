@@ -17,7 +17,6 @@ import SettingsIcon from "@material-ui/icons/Settings";
 import ExitToAppIcon from "@material-ui/icons/ExitToApp";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import { makeStyles } from '@material-ui/core/styles';
-
 import "./AdminSidebar.css";
 import { Link } from "react-router-dom";
 
@@ -37,7 +36,9 @@ const useStyles = makeStyles((theme) => ({
 function AdminSidebar() {
   const classes = useStyles();
   return (
+        
     <div className="adminSidebar">
+      
       <div className="adminSidebar__avatar">
         <Avatar
           className={classes.large}
@@ -81,17 +82,7 @@ function AdminSidebar() {
             <ListItemText primary="Exam Papers" />
           </Link>
         </ListItem>
-        <ListItem button>
-          <ListItemIcon>
-            <QuestionAnswerIcon style={{ color: "#ffffff" }} />
-          </ListItemIcon>
-          <Link
-            to="/admin/questions"
-            style={{ textDecoration: "none", color: "#ffffff" }}
-          >
-            <ListItemText primary="Questions" />
-          </Link>
-        </ListItem>
+        
         <ListItem button>
           <ListItemIcon>
             <DescriptionIcon style={{ color: "#ffffff" }} />
@@ -103,17 +94,7 @@ function AdminSidebar() {
             <ListItemText primary="Articles" />
           </Link>
         </ListItem>
-        <ListItem button>
-          <ListItemIcon>
-            <NoteIcon style={{ color: "#ffffff" }} />
-          </ListItemIcon>
-          <Link
-            to="/admin/resource-management"
-            style={{ textDecoration: "none", color: "#ffffff" }}
-          >
-            <ListItemText primary="Short Notes" />
-          </Link>
-        </ListItem>
+        
       </List>
       <Divider />
       <List>
