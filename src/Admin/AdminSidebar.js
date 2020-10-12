@@ -53,46 +53,34 @@ function AdminSidebar() {
           <ListItemIcon>
             <LaptopChromebookIcon style={{ color: "#ffffff" }} />
           </ListItemIcon>
-          <Link
-            to="/admin/lectures"
+          <a
+            href="/admin/lectures"
             style={{ textDecoration: "none", color: "#ffffff" }}
           >
             <ListItemText primary="Videos" />
-          </Link>
+          </a>
         </ListItem>
         <ListItem button>
           <ListItemIcon>
             <DateRangeIcon style={{ color: "#ffffff" }} />
           </ListItemIcon>
-          <Link
-            to="/admin/pastpapers"
+          <a
+            href="/admin/pastpapers"
             style={{ textDecoration: "none", color: "#ffffff" }}
           >
             <ListItemText primary="Past Papers" />
-          </Link>
+          </a>
         </ListItem>
         <ListItem button>
           <ListItemIcon>
             <BookIcon style={{ color: "#ffffff" }} />
           </ListItemIcon>
-          <Link
-            to="/admin/exampapers"
+          <a
+            href="/admin/exampapers"
             style={{ textDecoration: "none", color: "#ffffff" }}
           >
             <ListItemText primary="Exam Papers" />
-          </Link>
-        </ListItem>
-        
-        <ListItem button>
-          <ListItemIcon>
-            <DescriptionIcon style={{ color: "#ffffff" }} />
-          </ListItemIcon>
-          <Link
-            to="/admin/resource-management"
-            style={{ textDecoration: "none", color: "#ffffff" }}
-          >
-            <ListItemText primary="Articles" />
-          </Link>
+          </a>
         </ListItem>
         
       </List>

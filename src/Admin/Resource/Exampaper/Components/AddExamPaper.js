@@ -128,7 +128,7 @@ function AddExamPaper() {
             </div>
           </div>
           <div className="form-row">
-            <div className="input-group mb-3 col-md-6">
+            <div className="mb-3 col-md-6">
               <label for="inputSchool">School</label>
               <input
                 id="inputSchool"
@@ -137,8 +137,10 @@ function AddExamPaper() {
                 onChange={(e) => setSchool(e.target.value)}
               />
             </div>
-            <div className="input-group mb-3 col-md-6">
+            <div className="mb-3 col-md-6">
+            <label for="inputSchool">Choose Exampaper File</label>
               <div className="custom-file">
+
                 <input
                   type="file"
                   className="custom-file-input"
@@ -153,7 +155,7 @@ function AddExamPaper() {
           </div>
           <div>
             <progress
-              style={{ width: "73vw", height: "20px" }}
+              style={{ width: "66vw", height: "20px" }}
               value={progress}
               max="100"
             ></progress>

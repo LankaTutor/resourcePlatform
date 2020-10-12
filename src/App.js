@@ -4,6 +4,7 @@ import {
   Route,
   Redirect,
   Switch,
+  withRouter
 } from "react-router-dom";
 import jwt_decode from "jwt-decode";
 import setAuthToken from "./utils/setAuthToken";
@@ -58,6 +59,10 @@ import Lecture from "./Resources/Lectures/Pages/Lecture";
 import SubUnits from "./Resources/Lectures/Pages/SubUnits";
 import SubUnit from "./Resources/Lectures/Pages/SubUnit"
 import SingleArticlePage from "./Resources/Article/Pages/SingleArticlePage";
+
+import AdminVideos from "./Admin/Resource/AdminVideos";
+import AdminPastpaper from "./Admin/Resource/AdminPastpaper";
+import AdminExampaper from "./Admin/Resource/AdminExampaper";
 
 // Check for token to keep user logged in
 if (localStorage.jwtToken) {
@@ -178,6 +183,13 @@ class App extends Component {
               <MentorDashboard />
             </Route>
 
+            
+            <Route path="/admin/lectures" component={withRouter(AdminVideos)} exact />
+             
+            <Route path="/admin/pastpapers" component={withRouter(AdminPastpaper)} exact/>
+            <Route path="/admin/exampapers" exact>
+              <AdminExampaper />
+            </Route>
             <Route path="/admin" exact>
               <AdminDashboard />
             </Route>

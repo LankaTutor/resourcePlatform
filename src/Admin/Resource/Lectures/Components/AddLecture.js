@@ -158,7 +158,7 @@ function AddLecture() {
 
           <progress
             className="mt-2"
-            style={{ width: "68vw", height: "20px" }}
+            style={{ width: "66vw", height: "20px" }}
             value={progress}
             max="100"
           ></progress>
