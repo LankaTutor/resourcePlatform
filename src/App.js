@@ -63,6 +63,8 @@ import SingleArticlePage from "./Resources/Article/Pages/SingleArticlePage";
 import AdminVideos from "./Admin/Resource/AdminVideos";
 import AdminPastpaper from "./Admin/Resource/AdminPastpaper";
 import AdminExampaper from "./Admin/Resource/AdminExampaper";
+import AdminMentors from "./Admin/AdminMentor";
+import AdminStudents from "./Admin/AdminStudent";
 
 // Check for token to keep user logged in
 if (localStorage.jwtToken) {
@@ -187,9 +189,9 @@ class App extends Component {
             <Route path="/admin/lectures" component={withRouter(AdminVideos)} exact />
              
             <Route path="/admin/pastpapers" component={withRouter(AdminPastpaper)} exact/>
-            <Route path="/admin/exampapers" exact>
-              <AdminExampaper />
-            </Route>
+            <Route path="/admin/exampapers" component={withRouter(AdminExampaper)} exact />
+            <Route path="/admin/mentors" component={withRouter(AdminMentors)} exact/>
+            <Route path="/admin/students" component={withRouter(AdminStudents)} exact/>
             <Route path="/admin" exact>
               <AdminDashboard />
             </Route>

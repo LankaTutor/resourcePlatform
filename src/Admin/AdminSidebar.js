@@ -90,23 +90,23 @@ function AdminSidebar() {
           <ListItemIcon style={{ color: "#ffffff" }}>
             <SupervisorAccountIcon />
           </ListItemIcon>
-          <Link
-            to="/admin/resource-management"
+          <a
+            href="/admin/mentors"
             style={{ textDecoration: "none", color: "#ffffff" }}
           >
             <ListItemText primary="Mentors" />
-          </Link>
+          </a>
         </ListItem>
         <ListItem button>
           <ListItemIcon>
             <PersonIcon style={{ color: "#ffffff" }} />
           </ListItemIcon>
-          <Link
-            to="/admin/resource-management"
+          <a
+            href="/admin/students"
             style={{ textDecoration: "none", color: "#ffffff" }}
           >
             <ListItemText primary="Students" />
-          </Link>
+          </a>
         </ListItem>
       </List>
 
