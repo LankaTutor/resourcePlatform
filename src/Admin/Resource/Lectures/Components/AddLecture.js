@@ -130,7 +130,7 @@ function AddLecture() {
                 <option>Sinhala</option>
               </select>
             </div>
-            <div className="form-group col-md-6">
+            <div className="form-group mb-3 col-md-6">
               <label for="inputID">Video Number</label>
               <input
                 id="inputID"

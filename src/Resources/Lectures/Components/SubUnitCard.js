@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";
@@ -34,14 +34,17 @@ const useStyles = makeStyles({
 });
 
 function SubUnitCard({ subject, subunit, unitNo, videos, img }) {
+
   const isAuth = useSelector((state)=>state.auth.isAuthenticated);
   let url = '';
-  isAuth? url=`/alsubjects/${subject}` : url='/login'; 
+  isAuth? url=`/alsubjects/${subject}/${subunit}` : url='/login'; 
   const classes = useStyles();
+ 
+  
 
   return (
     <div>
-      <Link to={url}>
+      <a href={url}>
       <Card className={classes.root}>
         <CardActionArea>
           <CardMedia className={classes.media} image={img} title={subject} />
@@ -58,8 +61,8 @@ function SubUnitCard({ subject, subunit, unitNo, videos, img }) {
           </CardContent>
         </CardActionArea>
         <CardActions>
-          <Link to="/path">
-          <Button className={classes.button1} size="small" >
+          <Link to="#">
+          <Button className={classes.button1} size="small">
             Enroll Now
           </Button>
           </Link>
@@ -68,7 +71,7 @@ function SubUnitCard({ subject, subunit, unitNo, videos, img }) {
           </Button>
         </CardActions>
       </Card>
-      </Link>
+      </a>
     </div>
   );
 }
